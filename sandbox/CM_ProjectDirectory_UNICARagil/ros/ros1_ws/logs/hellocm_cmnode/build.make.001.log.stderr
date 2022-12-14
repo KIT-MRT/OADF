@@ -1,0 +1,295 @@
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:121:2:[m[K [01;35m[Kwarning: [m[K#warning "Debug options are enabled!" [[01;35m[K-Wcpp[m[K]
+ #[01;35m[Kwarning[m[K "Debug options are enabled!"
+  [01;35m[K^~~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:199:39:[m[K [01;31m[Kerror: [m[K‘[01m[KExt2CM[m[K’ is not a member of ‘[01m[Koadf_msgs[m[K’
+             tRosIF_TpcSub <oadf_msgs::[01;31m[KExt2CM[m[K> Ext2CM; /* For this example also used for Synchronization */
+                                       [01;31m[K^~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:199:39:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm/include/hellocm/ROS1_HelloCM.h:26[m[K,
+                 from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:103[m[K:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/devel/.private/hellocm_msgs/include/hellocm_msgs/Ext2CM.h:59:56:[m[K [01;36m[Knote: [m[K  ‘[01m[Khellocm_msgs::Ext2CM[m[K’
+ typedef ::hellocm_msgs::Ext2CM_<std::allocator<void> > [01;36m[KExt2CM[m[K;
+                                                        [01;36m[K^~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:199:39:[m[K [01;31m[Kerror: [m[K‘[01m[KExt2CM[m[K’ is not a member of ‘[01m[Koadf_msgs[m[K’
+             tRosIF_TpcSub <oadf_msgs::[01;31m[KExt2CM[m[K> Ext2CM; /* For this example also used for Synchronization */
+                                       [01;31m[K^~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:199:39:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm/include/hellocm/ROS1_HelloCM.h:26[m[K,
+                 from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:103[m[K:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/devel/.private/hellocm_msgs/include/hellocm_msgs/Ext2CM.h:59:56:[m[K [01;36m[Knote: [m[K  ‘[01m[Khellocm_msgs::Ext2CM[m[K’
+ typedef ::hellocm_msgs::Ext2CM_<std::allocator<void> > [01;36m[KExt2CM[m[K;
+                                                        [01;36m[K^~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:199:45:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+             tRosIF_TpcSub <oadf_msgs::Ext2CM[01;31m[K>[m[K Ext2CM; /* For this example also used for Synchronization */
+                                             [01;31m[K^[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:206:39:[m[K [01;31m[Kerror: [m[K‘[01m[KCM2Ext[m[K’ is not a member of ‘[01m[Koadf_msgs[m[K’
+             tRosIF_TpcPub <oadf_msgs::[01;31m[KCM2Ext[m[K> CM2Ext;
+                                       [01;31m[K^~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:206:39:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm/include/hellocm/ROS1_HelloCM.h:27[m[K,
+                 from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:103[m[K:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/devel/.private/hellocm_msgs/include/hellocm_msgs/CM2Ext.h:64:56:[m[K [01;36m[Knote: [m[K  ‘[01m[Khellocm_msgs::CM2Ext[m[K’
+ typedef ::hellocm_msgs::CM2Ext_<std::allocator<void> > [01;36m[KCM2Ext[m[K;
+                                                        [01;36m[K^~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:206:39:[m[K [01;31m[Kerror: [m[K‘[01m[KCM2Ext[m[K’ is not a member of ‘[01m[Koadf_msgs[m[K’
+             tRosIF_TpcPub <oadf_msgs::[01;31m[KCM2Ext[m[K> CM2Ext;
+                                       [01;31m[K^~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:206:39:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm/include/hellocm/ROS1_HelloCM.h:27[m[K,
+                 from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:103[m[K:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/devel/.private/hellocm_msgs/include/hellocm_msgs/CM2Ext.h:64:56:[m[K [01;36m[Knote: [m[K  ‘[01m[Khellocm_msgs::CM2Ext[m[K’
+ typedef ::hellocm_msgs::CM2Ext_<std::allocator<void> > [01;36m[KCM2Ext[m[K;
+                                                        [01;36m[K^~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:206:45:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+             tRosIF_TpcPub <oadf_msgs::CM2Ext[01;31m[K>[m[K CM2Ext;
+                                             [01;31m[K^[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:226:32:[m[K [01;31m[Kerror: [m[K‘[01m[KInit[m[K’ is not a member of ‘[01m[Koadf_msgs[m[K’
+         tRosIF_Srv <oadf_msgs::[01;31m[KInit[m[K> Init;
+                                [01;31m[K^~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:226:32:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm/include/hellocm/ROS1_HelloCM.h:28[m[K,
+                 from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:103[m[K:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/devel/.private/hellocm_msgs/include/hellocm_msgs/Init.h:18:8:[m[K [01;36m[Knote: [m[K  ‘[01m[Khellocm_msgs::Init[m[K’
+ struct [01;36m[KInit[m[K
+        [01;36m[K^~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:226:32:[m[K [01;31m[Kerror: [m[K‘[01m[KInit[m[K’ is not a member of ‘[01m[Koadf_msgs[m[K’
+         tRosIF_Srv <oadf_msgs::[01;31m[KInit[m[K> Init;
+                                [01;31m[K^~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:226:32:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm/include/hellocm/ROS1_HelloCM.h:28[m[K,
+                 from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:103[m[K:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/devel/.private/hellocm_msgs/include/hellocm_msgs/Init.h:18:8:[m[K [01;36m[Knote: [m[K  ‘[01m[Khellocm_msgs::Init[m[K’
+ struct [01;36m[KInit[m[K
+        [01;36m[K^~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:226:36:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+         tRosIF_Srv <oadf_msgs::Init[01;31m[K>[m[K Init;
+                                    [01;31m[K^[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:266:54:[m[K [01;31m[Kerror: [m[K‘[01m[KExt2CM[m[K’ in namespace ‘[01m[Koadf_msgs[m[K’ does not name a type
+ static void cmnode_HelloCM_CB_TpcIn(const oadf_msgs::[01;31m[KExt2CM[m[K::ConstPtr &msg) {
+                                                      [01;31m[K^~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:266:71:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K&[m[K’ token
+ static void cmnode_HelloCM_CB_TpcIn(const oadf_msgs::Ext2CM::ConstPtr [01;31m[K&[m[Kmsg) {
+                                                                       [01;31m[K^[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:266:70:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K&[m[K’ token
+ static void cmnode_HelloCM_CB_TpcIn[34m[K([m[Kconst oadf_msgs::Ext2CM::ConstPtr[01;31m[K [m[K[32m[K&[m[Kmsg) {
+                                    [34m[K~[m[K                                 [01;31m[K^[m[K[32m[K~[m[K
+                                                                      [32m[K)[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:266:72:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kmsg[m[K’
+ static void cmnode_HelloCM_CB_TpcIn(const oadf_msgs::Ext2CM::ConstPtr &[01;31m[Kmsg[m[K) {
+                                                                        [01;31m[K^~~[m[K
+In file included from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:64[m[K:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:[m[K In function ‘[01m[KtDrvTrj_TrjState usertrj_GetTrajectory(tDrvTrj_Trj*, const tDrvTrj_Pnt*, double, double, tDrvTrj_Mode)[m[K’:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:512:23:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%lu[m[K’ expects argument of type ‘[01m[Klong unsigned int[m[K’, but argument 9 has type ‘[01m[Kint[m[K’ [[01;35m[K-Wformat=[m[K]
+             ROS_ERROR([01;35m[K"Received /trajGCS only has %lu elements, it should have %lu elements"[m[K, trj_len, 51);
+                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/console.h:348:165:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, [01;36m[K__VA_ARGS__[m[K)
+                                                                                                                                                                     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/console.h:387:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+       [01;36m[KROSCONSOLE_PRINT_AT_LOCATION[m[K(__VA_ARGS__); \
+       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/console.h:572:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+ #define ROS_LOG(level, name, ...) [01;36m[KROS_LOG_COND[m[K(true, level, name, __VA_ARGS__)
+                                   [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/rosconsole/macros_generated.h:214:24:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+ #define ROS_ERROR(...) [01;36m[KROS_LOG[m[K(::ros::console::levels::Error, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+                        [01;36m[K^~~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:512:13:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_ERROR[m[K’
+             [01;36m[KROS_ERROR[m[K("Received /trajGCS only has %lu elements, it should have %lu elements", trj_len, 51);
+             [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:[m[K In function ‘[01m[Kint CMRosIF_CMNode_Init(int, char**, char*, tInfos*)[m[K’:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:817:30:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KPub[m[K’ in ‘[01m[KCMNode.<unnamed struct>::Topics.<unnamed struct>::<unnamed struct>::Pub.<unnamed struct>::<unnamed struct>::<unnamed struct>::CM2Ext[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+     CMNode.Topics.Pub.CM2Ext.[01;31m[KPub[m[K = node->advertise<oadf_msgs::CM2Ext>(sbuf, CMNode.Cfg.QueuePub);
+                              [01;31m[K^~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:817:63:[m[K [01;31m[Kerror: [m[K‘[01m[KCM2Ext[m[K’ is not a member of ‘[01m[Koadf_msgs[m[K’
+     CMNode.Topics.Pub.CM2Ext.Pub = node->advertise<oadf_msgs::[01;31m[KCM2Ext[m[K>(sbuf, CMNode.Cfg.QueuePub);
+                                                               [01;31m[K^~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:817:63:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm/include/hellocm/ROS1_HelloCM.h:27[m[K,
+                 from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:103[m[K:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/devel/.private/hellocm_msgs/include/hellocm_msgs/CM2Ext.h:64:56:[m[K [01;36m[Knote: [m[K  ‘[01m[Khellocm_msgs::CM2Ext[m[K’
+ typedef ::hellocm_msgs::CM2Ext_<std::allocator<void> > [01;36m[KCM2Ext[m[K;
+                                                        [01;36m[K^~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:817:63:[m[K [01;31m[Kerror: [m[K‘[01m[KCM2Ext[m[K’ is not a member of ‘[01m[Koadf_msgs[m[K’
+     CMNode.Topics.Pub.CM2Ext.Pub = node->advertise<oadf_msgs::[01;31m[KCM2Ext[m[K>(sbuf, CMNode.Cfg.QueuePub);
+                                                               [01;31m[K^~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:817:63:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm/include/hellocm/ROS1_HelloCM.h:27[m[K,
+                 from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:103[m[K:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/devel/.private/hellocm_msgs/include/hellocm_msgs/CM2Ext.h:64:56:[m[K [01;36m[Knote: [m[K  ‘[01m[Khellocm_msgs::CM2Ext[m[K’
+ typedef ::hellocm_msgs::CM2Ext_<std::allocator<void> > [01;36m[KCM2Ext[m[K;
+                                                        [01;36m[K^~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:817:96:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kros::NodeHandle::advertise<<expression error> >(char [512], int&)[m[K’
+     CMNode.Topics.Pub.CM2Ext.Pub = node->advertise<oadf_msgs::CM2Ext>(sbuf, CMNode.Cfg.QueuePub[01;31m[K)[m[K;
+                                                                                                [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/opt/ros/melodic/include/pcl_conversions/pcl_conversions.h:42[m[K,
+                 from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:85[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:249:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M> ros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, bool)[m[K’
+     Publisher [01;36m[Kadvertise[m[K(const std::string& topic, uint32_t queue_size, bool latch = false)
+               [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:249:15:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:817:96:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+     CMNode.Topics.Pub.CM2Ext.Pub = node->advertise<oadf_msgs::CM2Ext>(sbuf, CMNode.Cfg.QueuePub[01;31m[K)[m[K;
+                                                                                                [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/opt/ros/melodic/include/pcl_conversions/pcl_conversions.h:42[m[K,
+                 from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:85[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:315:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M> ros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, const SubscriberStatusCallback&, const SubscriberStatusCallback&, const VoidConstPtr&, bool)[m[K’
+   Publisher [01;36m[Kadvertise[m[K(const std::string& topic, uint32_t queue_size,
+             [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:315:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:817:96:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+     CMNode.Topics.Pub.CM2Ext.Pub = node->advertise<oadf_msgs::CM2Ext>(sbuf, CMNode.Cfg.QueuePub[01;31m[K)[m[K;
+                                                                                                [01;31m[K^[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:818:30:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KJob[m[K’ in ‘[01m[KCMNode.<unnamed struct>::Topics.<unnamed struct>::<unnamed struct>::Pub.<unnamed struct>::<unnamed struct>::<unnamed struct>::CM2Ext[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+     CMNode.Topics.Pub.CM2Ext.[01;31m[KJob[m[K = CMCRJob_Create(sbuf);
+                              [01;31m[K^~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:819:30:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KCycleTime[m[K’ in ‘[01m[KCMNode.<unnamed struct>::Topics.<unnamed struct>::<unnamed struct>::Pub.<unnamed struct>::<unnamed struct>::<unnamed struct>::CM2Ext[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+     CMNode.Topics.Pub.CM2Ext.[01;31m[KCycleTime[m[K = 50;
+                              [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:820:30:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KCycleOffset[m[K’ in ‘[01m[KCMNode.<unnamed struct>::Topics.<unnamed struct>::<unnamed struct>::Pub.<unnamed struct>::<unnamed struct>::<unnamed struct>::CM2Ext[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+     CMNode.Topics.Pub.CM2Ext.[01;31m[KCycleOffset[m[K = 0;
+                              [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:902:30:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KSub[m[K’ in ‘[01m[KCMNode.<unnamed struct>::Topics.<unnamed struct>::<unnamed struct>::Sub.<unnamed struct>::<unnamed struct>::<unnamed struct>::Ext2CM[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+     CMNode.Topics.Sub.Ext2CM.[01;31m[KSub[m[K = node->subscribe(sbuf, CMNode.Cfg.QueueSub, cmnode_HelloCM_CB_TpcIn);
+                              [01;31m[K^~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:902:79:[m[K [01;31m[Kerror: [m[K‘[01m[Kcmnode_HelloCM_CB_TpcIn[m[K’ was not declared in this scope
+     CMNode.Topics.Sub.Ext2CM.Sub = node->subscribe(sbuf, CMNode.Cfg.QueueSub, [01;31m[Kcmnode_HelloCM_CB_TpcIn[m[K);
+                                                                               [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:902:79:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kcmnode_HelloCM_CB_TrjIn[m[K’
+     CMNode.Topics.Sub.Ext2CM.Sub = node->subscribe(sbuf, CMNode.Cfg.QueueSub, [01;36m[Kcmnode_HelloCM_CB_TpcIn[m[K);
+                                                                               [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+                                                                               [32m[Kcmnode_HelloCM_CB_TrjIn[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:903:30:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KJob[m[K’ in ‘[01m[KCMNode.<unnamed struct>::Topics.<unnamed struct>::<unnamed struct>::Sub.<unnamed struct>::<unnamed struct>::<unnamed struct>::Ext2CM[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+     CMNode.Topics.Sub.Ext2CM.[01;31m[KJob[m[K = CMCRJob_Create("Ext2CM_for_Sync");
+                              [01;31m[K^~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:907:30:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KCycleTime[m[K’ in ‘[01m[KCMNode.<unnamed struct>::Topics.<unnamed struct>::<unnamed struct>::Sub.<unnamed struct>::<unnamed struct>::<unnamed struct>::Ext2CM[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+     CMNode.Topics.Sub.Ext2CM.[01;31m[KCycleTime[m[K = 15000;
+                              [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:929:26:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KClnt[m[K’ in ‘[01m[KCMNode.<unnamed struct>::Services.<unnamed struct>::<unnamed struct>::Init[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+     CMNode.Services.Init.[01;31m[KClnt[m[K = node->serviceClient<oadf_msgs::Init>(sbuf);
+                          [01;31m[K^~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:929:64:[m[K [01;31m[Kerror: [m[K‘[01m[KInit[m[K’ is not a member of ‘[01m[Koadf_msgs[m[K’
+     CMNode.Services.Init.Clnt = node->serviceClient<oadf_msgs::[01;31m[KInit[m[K>(sbuf);
+                                                                [01;31m[K^~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:929:64:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm/include/hellocm/ROS1_HelloCM.h:28[m[K,
+                 from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:103[m[K:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/devel/.private/hellocm_msgs/include/hellocm_msgs/Init.h:18:8:[m[K [01;36m[Knote: [m[K  ‘[01m[Khellocm_msgs::Init[m[K’
+ struct [01;36m[KInit[m[K
+        [01;36m[K^~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:929:64:[m[K [01;31m[Kerror: [m[K‘[01m[KInit[m[K’ is not a member of ‘[01m[Koadf_msgs[m[K’
+     CMNode.Services.Init.Clnt = node->serviceClient<oadf_msgs::[01;31m[KInit[m[K>(sbuf);
+                                                                [01;31m[K^~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:929:64:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm/include/hellocm/ROS1_HelloCM.h:28[m[K,
+                 from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:103[m[K:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/devel/.private/hellocm_msgs/include/hellocm_msgs/Init.h:18:8:[m[K [01;36m[Knote: [m[K  ‘[01m[Khellocm_msgs::Init[m[K’
+ struct [01;36m[KInit[m[K
+        [01;36m[K^~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:929:74:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kros::NodeHandle::serviceClient<<expression error> >(char [512])[m[K’
+     CMNode.Services.Init.Clnt = node->serviceClient<oadf_msgs::Init>(sbuf[01;31m[K)[m[K;
+                                                                          [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/opt/ros/melodic/include/pcl_conversions/pcl_conversions.h:42[m[K,
+                 from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:85[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1240:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MReq, class MRes> ros::ServiceClient ros::NodeHandle::serviceClient(const string&, bool, const M_string&)[m[K’
+   ServiceClient [01;36m[KserviceClient[m[K(const std::string& service_name, bool persistent = false,
+                 [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1240:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:929:74:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+     CMNode.Services.Init.Clnt = node->serviceClient<oadf_msgs::Init>(sbuf[01;31m[K)[m[K;
+                                                                          [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/opt/ros/melodic/include/pcl_conversions/pcl_conversions.h:42[m[K,
+                 from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:85[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1260:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Service> ros::ServiceClient ros::NodeHandle::serviceClient(const string&, bool, const M_string&)[m[K’
+   ServiceClient [01;36m[KserviceClient[m[K(const std::string& service_name, bool persistent = false,
+                 [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1260:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:929:74:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+     CMNode.Services.Init.Clnt = node->serviceClient<oadf_msgs::Init>(sbuf[01;31m[K)[m[K;
+                                                                          [01;31m[K^[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:[m[K In function ‘[01m[Kint CMRosIF_CMNode_TestRun_Start_atBegin(tInfos*)[m[K’:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1129:15:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KClnt[m[K’ in ‘[01m[K* srv[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+     if (!srv->[01;31m[KClnt[m[K.exists()) {
+               [01;31m[K^~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1133:22:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KClnt[m[K’ in ‘[01m[K* srv[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+                 srv->[01;31m[KClnt[m[K.getService().c_str());
+                      [01;31m[K^~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1141:15:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KClnt[m[K’ in ‘[01m[K* srv[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+     if (!srv->[01;31m[KClnt[m[K.call(srv->Msg)) {
+               [01;31m[K^~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1141:30:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KMsg[m[K’ in ‘[01m[K* srv[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+     if (!srv->Clnt.call(srv->[01;31m[KMsg[m[K)) {
+                              [01;31m[K^~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1167:44:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KCycleTime[m[K’ in ‘[01m[KCMNode.<unnamed struct>::Topics.<unnamed struct>::<unnamed struct>::Sub.<unnamed struct>::<unnamed struct>::<unnamed struct>::Ext2CM[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+     pcycletime = &CMNode.Topics.Sub.Ext2CM.[01;31m[KCycleTime[m[K;
+                                            [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1195:36:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KJob[m[K’ in ‘[01m[KCMNode.<unnamed struct>::Topics.<unnamed struct>::<unnamed struct>::Pub.<unnamed struct>::<unnamed struct>::<unnamed struct>::CM2Ext[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+     job = CMNode.Topics.Pub.CM2Ext.[01;31m[KJob[m[K;
+                                    [01;31m[K^~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1196:42:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KCycleTime[m[K’ in ‘[01m[KCMNode.<unnamed struct>::Topics.<unnamed struct>::<unnamed struct>::Pub.<unnamed struct>::<unnamed struct>::<unnamed struct>::CM2Ext[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+     cycletime = CMNode.Topics.Pub.CM2Ext.[01;31m[KCycleTime[m[K;
+                                          [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1197:41:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KCycleOffset[m[K’ in ‘[01m[KCMNode.<unnamed struct>::Topics.<unnamed struct>::<unnamed struct>::Pub.<unnamed struct>::<unnamed struct>::<unnamed struct>::CM2Ext[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+     cycleoff = CMNode.Topics.Pub.CM2Ext.[01;31m[KCycleOffset[m[K;
+                                         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1221:36:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KJob[m[K’ in ‘[01m[KCMNode.<unnamed struct>::Topics.<unnamed struct>::<unnamed struct>::Sub.<unnamed struct>::<unnamed struct>::<unnamed struct>::Ext2CM[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+     job = CMNode.Topics.Sub.Ext2CM.[01;31m[KJob[m[K;
+                                    [01;31m[K^~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1222:42:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KCycleTime[m[K’ in ‘[01m[KCMNode.<unnamed struct>::Topics.<unnamed struct>::<unnamed struct>::Sub.<unnamed struct>::<unnamed struct>::<unnamed struct>::Ext2CM[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+     cycletime = CMNode.Topics.Sub.Ext2CM.[01;31m[KCycleTime[m[K;
+                                          [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1223:41:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KCycleOffset[m[K’ in ‘[01m[KCMNode.<unnamed struct>::Topics.<unnamed struct>::<unnamed struct>::Sub.<unnamed struct>::<unnamed struct>::<unnamed struct>::Ext2CM[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+     cycleoff = CMNode.Topics.Sub.Ext2CM.[01;31m[KCycleOffset[m[K = 0; /* No offset allowed if ROS Timer is used for sync!*/
+                                         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1230:38:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KSub[m[K’ in ‘[01m[KCMNode.<unnamed struct>::Topics.<unnamed struct>::<unnamed struct>::Sub.<unnamed struct>::<unnamed struct>::<unnamed struct>::Ext2CM[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+             CMNode.Topics.Sub.Ext2CM.[01;31m[KSub[m[K.getTopic().c_str(),
+                                      [01;31m[K^~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:129:41:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KLOG[m[K’
+ #define LOG(frmt, ...) Log(frmt "\n", ##[01;36m[K__VA_ARGS__[m[K)
+                                         [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:[m[K In function ‘[01m[Kint CMRosIF_CMNode_In()[m[K’:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1389:52:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KJob[m[K’ in ‘[01m[KCMNode.<unnamed struct>::Topics.<unnamed struct>::<unnamed struct>::Sub.<unnamed struct>::<unnamed struct>::<unnamed struct>::Ext2CM[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+                     job = CMNode.Topics.Sub.Ext2CM.[01;31m[KJob[m[K;
+                                                    [01;31m[K^~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:[m[K In function ‘[01m[Kint CMRosIF_CMNode_Calc(double)[m[K’:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1511:35:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KJob[m[K’ in ‘[01m[K* sync[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+     if ((rv = CMCRJob_DoJob(sync->[01;31m[KJob[m[K, CMNode.CycleNoRel, 1, NULL, NULL)) != CMCRJob_RV_DoNothing &&
+                                   [01;31m[K^~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1513:93:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KJob[m[K’ in ‘[01m[K* sync[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+         LogErrF(EC_Sim, "CMNode: Error on DoJob for Job '%s'! rv=%s", CMCRJob_GetName(sync->[01;31m[KJob[m[K), CMCRJob_RVStr(rv));
+                                                                                             [01;31m[K^~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:[m[K In function ‘[01m[Kint CMRosIF_CMNode_Out()[m[K’:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1638:34:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KJob[m[K’ in ‘[01m[K* out[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+     if ((rv = CMCRJob_DoJob(out->[01;31m[KJob[m[K, CMNode.CycleNoRel, 1, NULL, NULL)) != CMCRJob_RV_DoNothing &&
+                                  [01;31m[K^~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1640:92:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KJob[m[K’ in ‘[01m[K* out[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+         LogErrF(EC_Sim, "CMNode: Error on DoJob for Job '%s'! rv=%s", CMCRJob_GetName(out->[01;31m[KJob[m[K), CMCRJob_RVStr(rv));
+                                                                                            [01;31m[K^~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1643:14:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KMsg[m[K’ in ‘[01m[K* out[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+         out->[01;31m[KMsg[m[K.cycleno = CMNode.CycleNoRel;
+              [01;31m[K^~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1644:14:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KMsg[m[K’ in ‘[01m[K* out[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+         out->[01;31m[KMsg[m[K.time = ros::Time(SimCore.Time);
+              [01;31m[K^~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1645:14:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KMsg[m[K’ in ‘[01m[K* out[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+         out->[01;31m[KMsg[m[K.synthdelay = CMNode.Sync.SynthDelay;
+              [01;31m[K^~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1652:14:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KMsg[m[K’ in ‘[01m[K* out[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+         out->[01;31m[KMsg[m[K.header.stamp.sec = wtime.sec;
+              [01;31m[K^~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1653:14:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KMsg[m[K’ in ‘[01m[K* out[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+         out->[01;31m[KMsg[m[K.header.stamp.nsec = wtime.nsec;
+              [01;31m[K^~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1655:14:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KPub[m[K’ in ‘[01m[K* out[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+         out->[01;31m[KPub[m[K.publish(out->Msg);
+              [01;31m[K^~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1655:31:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KMsg[m[K’ in ‘[01m[K* out[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+         out->Pub.publish(out->[01;31m[KMsg[m[K);
+                               [01;31m[K^~~[m[K
+make[2]: *** [CMakeFiles/CMNode_ROS1_HelloCM.dir/src/CMNode_ROS1_HelloCM.cpp.o] Error 1
+make[1]: *** [CMakeFiles/CMNode_ROS1_HelloCM.dir/all] Error 2
+make: *** [all] Error 2

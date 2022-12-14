@@ -1,0 +1,21 @@
+newmtl chrome
+Ka 0.30 0.30 0.35  
+Kd 0.58 0.58 0.59
+Ks .6 .6 .6 
+Ns 150 	
+MatID metal
+
+newmtl chrome_black
+Ka 0 0 0
+Kd 0.0596667 0.0596667 0.0596667
+Ks 0.5 0.5 0.5
+Ns 28.84 
+MatID metal
+
+newmtl tire
+Ns 60
+Ka 0.5 0.5 0.5
+Kd 1 1 1
+Ks 0.08 0.08 0.08
+map_Kd UNICARagil_Shuttle.jpg
+MatID rubber

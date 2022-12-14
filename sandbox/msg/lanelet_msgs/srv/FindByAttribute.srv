@@ -1,0 +1,4 @@
+std_msgs/String key
+std_msgs/String value
+---
+int32[] lanelet_ids

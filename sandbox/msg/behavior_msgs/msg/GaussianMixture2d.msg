@@ -1,0 +1,1 @@
+WeightedGaussian2d[] components

@@ -1,0 +1,17 @@
+lanelet_map_filename: $(find lanelet_map_launch)/res/airpark_lanelet2_fixed.osm
+/lanelet_map_filename: $(find lanelet_map_launch)/res/airpark_lanelet2_fixed.osm
+/lanelet2_interface_ros/map_file_name: $(find lanelet_map_launch)/res/airpark_lanelet2_fixed.osm
+lanelet_ids_on_route: "none"
+simulation: true
+publish_obstacles: true
+perception: false
+sensor_modules: false
+parking: false
+map_center_lat: 49.8547336888119758668835856951773166656494
+map_center_lon: 8.5875600835741394689648586791008710861206
+map_center_long: 8.5875600835741394689648586791008710861206
+/lanelet2_interface_ros/lat_origin: 49.8547336888119758668835856951773166656494
+/lanelet2_interface_ros/lon_origin: 8.5875600835741394689648586791008710861206
+/pose_for_gnss_transform_publisher/py: 49.8547336888119758668835856951773166656494
+/pose_for_gnss_transform_publisher/px: 8.5875600835741394689648586791008710861206
+projection: "+proj=tmerc +a=6378137 +b=6378137 +lon_0=8.5875600835741377 +x_0=-0 +y_0=-5549803.5678728055 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs"

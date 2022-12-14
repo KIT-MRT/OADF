@@ -1,0 +1,14 @@
+# Config file autoX.toml for tpservice
+# Author: Stefan Ackermann <stefan.ackermann@tu-darmstadt.de>
+# Date 10.02.2022
+# Version 1
+# Copyright: MIT License
+# Copyright (c) Stefan Ackermann (2022) <stefan.ackermann@tu-darmstadt.de>
+
+# For autoX
+
+title = "autoX"
+
+[debug]
+errmsg = 0 #0: no error messages, 1: error messages
+runtime = 0 #0: no runtime messages, 1: runtime messages

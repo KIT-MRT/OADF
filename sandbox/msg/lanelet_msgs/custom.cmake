@@ -1,0 +1,2 @@
+set(PROJECT_MESSAGE_DEPENDS std_msgs geometry_msgs automated_driving_msgs)
+

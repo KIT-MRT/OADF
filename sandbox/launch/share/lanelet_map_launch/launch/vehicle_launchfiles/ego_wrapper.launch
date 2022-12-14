@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<launch>
+
+    <!-- arguments that are passed from the top launchfile -->
+    <arg name="vehicle_id" />
+    <arg name="vehicle_ns" />
+
+    <arg name="objects_ground_truth_topic_with_ns" />
+    <arg name="desired_motion_absolute_topic_with_ns" />
+
+
+    <arg name="use_behavior_approval" default="true" />
+    <arg name="headless_arbitration_gui" default="false" />
+    <arg name="visualize_arbitration_graph" default="true" />
+    <arg name="use_planner" />
+
+    <!-- vehicle initialization arguments -->
+    <arg name="object_initialization_topic_with_ns" />
+    <arg name="trajectory_file" />
+    <arg name="initial_v" />
+    <arg name="s_start" />
+    <arg name="hull_file" />
+    <arg name="frame_id_loc_mgmt" />
+    <arg name="lanelet_ids_on_route" />
+    <arg name="continuous_control_frame_id" />
+
+    <!-- <arg name="vehicle_characteristics_file" default="$(find vehicle_characteristics)/res/characteristics_joy.yaml" /> -->
+    <!-- only used for actuator in simulation -->
+    <!-- <arg name="bertha_characteristics_file" default="$(find vehicle_characteristics)/res/characteristics_ekla.yaml" /> -->
+
+    <!-- HARDCODED TOPICS ON JOY -->
+    <arg name="lowlevel_ego_state_topic_with_ns" value="$(arg vehicle_ns)/sensor/carinterface/bbf_ego_vehicle_state"/>
+    <arg name="ego_motion_topic_with_ns" default="$(arg vehicle_ns)/fusion/motion_state_odom" />
+    <arg name="tracked_objects_topic_with_ns" default="$(arg vehicle_ns)/perception/sceneshot/objects_tracked" />
+    <arg name="predicted_objects_topic_with_ns" value="$(arg vehicle_ns)/prediction/predicted_objects"/>
+    <arg name="obstacles_topic_with_ns" value="$(arg vehicle_ns)/perception/sceneshot/obstacles_NOT_IN_SIMULATION"/>
+    <arg name="measured_steering_angle_topic_with_ns" default="$(arg vehicle_ns)/sensor/carinterface/steering_angle"/>
+    <arg name="steering_angle_topic_with_ns" default="$(arg vehicle_ns)/control/steering"/>
+    <arg name="steering_angle_smoothed_topic_with_ns" default="$(arg vehicle_ns)/control/steering_smoothed"/>
+    <arg name="acceleration_topic_with_ns" default="$(arg vehicle_ns)/control/acceleration" />
+
+    <arg name="traffic_light_state_topic_with_ns" default="$(arg vehicle_ns)/behavior/traffic_light_state" />
+
+    <arg name="virtual_stoplines_state_topic_with_ns" default="$(arg vehicle_ns)/behavior/actions_info"/>
+    <arg name="virtual_stoplines_override_topic_with_ns" default="$(arg vehicle_ns)/behavior/change_virtual_stop"/>
+    <arg name="conflict_zones_out_topic_with_ns" default="$(arg vehicle_ns)/behavior/conflict_zones"/>
+    <arg name="indicator_out_topic_with_ns" default="$(arg vehicle_ns)/behavior/indicator"/>
+
+    <arg name="arbitration_yaml_topic_with_ns" default="$(arg vehicle_ns)/behavior/arbitration_yaml"/>
+
+    <!-- common params for prediction and planning horizon length -->
+    <arg name="desired_time_step_milliseconds" value="200" />
+    <arg name="prediction_horizon_seconds" value="5." />
+    <arg name="use_occupancy_prediction" value="false" />
+    <arg name="prediction_map_frame" default="map" />
+
+    <arg name="pedestrian_prediction_in_topic_with_ns" default="$(arg vehicle_ns)/prediction/pedestrian/sim_dummy" />
+
+    <arg name="ignore_predictions" value="false" />
+    <arg name="ignore_static_objects" value="true" />
+    <arg name="ignore_dynamic_objects" value="false" />
+    <arg name="ignore_behavior_objects" value="false" />
+
+
+    <!-- launch initialization (initial position and delta_trajectory) -->
+    <include file="$(find simulation_management_ros_tool)/launch/object_initialization.launch" ns="sim">
+        <arg name="object_id" value="$(arg vehicle_id)" />
+        <arg name="trajectory_file" value="$(arg trajectory_file)" />
+        <arg name="initial_v" value="$(arg initial_v)" />
+        <arg name="s_start" value="$(arg s_start)" />
+        <arg name="hull_file" value="$(arg hull_file)" />
+        <arg name="object_type" value="car" />
+        <arg name="object_role" value="AGENT_OPERATED" />
+        <arg name="frame_id_loc_mgmt" value="$(arg frame_id_loc_mgmt)" />
+
+        <arg name="object_initialization_topic_with_ns" value="$(arg object_initialization_topic_with_ns)" />
+    </include>
+
+
+
+
+</launch>
+
+

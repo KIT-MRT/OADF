@@ -1,0 +1,30 @@
+/*
+ * UNICARSteer_capi.h
+ *
+ * Academic License - for use in teaching, academic research, and meeting
+ * course requirements at degree granting institutions only.  Not for
+ * government, commercial, or other organizational use.
+ *
+ * Code generation for model "UNICARSteer".
+ *
+ * Model version              : 1.83
+ * Simulink Coder version : 9.2 (R2019b) 18-Jul-2019
+ * C source code generated on : Wed Dec  1 14:31:29 2021
+ *
+ * Target selection: CarMaker.tlc
+ * Note: GRT includes extra infrastructure and instrumentation for prototyping
+ * Embedded hardware selection: Intel->x86-64 (Windows64)
+ * Code generation objectives: Unspecified
+ * Validation result: Not run
+ */
+
+#ifndef RTW_HEADER_UNICARSteer_capi_h
+#define RTW_HEADER_UNICARSteer_capi_h
+#include "UNICARSteer.h"
+
+extern void UNICARSteer_InitializeDataMapInfo(RT_MODEL_UNICARSteer_T *const
+  UNICARSteer_M);
+
+#endif                                 /* RTW_HEADER_UNICARSteer_capi_h */
+
+/* EOF: UNICARSteer_capi.h */

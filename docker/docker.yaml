@@ -1,0 +1,4 @@
+DOCKER_REGISTRY: docker.io/eduardojmolinos
+DOCKER_IMAGE: oadf
+DOCKER_TAG: 20221214
+

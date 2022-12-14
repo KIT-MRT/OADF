@@ -1,0 +1,3 @@
+[submodule "unicar-definitions"]
+	path = unicar-definitions
+	url = https://git.rwth-aachen.de/fzd/unicar-agil/core-repositories/unicar-definitions.git

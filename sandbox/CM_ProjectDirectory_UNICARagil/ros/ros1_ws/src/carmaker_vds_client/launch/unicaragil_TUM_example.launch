@@ -1,0 +1,80 @@
+<launch>
+
+<arg doc="Movie startup delay factor for multiple instances"
+     name="delay_factor" default="0.5"/>
+
+<arg doc="Launch rqt with custom perspective"
+     name="start_rqt" default="true"/>
+
+<arg doc="Name of Camera 1 for ROS topic"
+     name="camera_name_1" default="FL_front_color"/>
+
+<arg doc="Name of Camera 2 for ROS topic"
+     name="camera_name_2" default="FR_front_color"/>
+
+<arg doc="Name of Camera 3 for ROS topic"
+     name="camera_name_3" default="FL_side_color"/>
+
+<arg doc="Name of Camera 4 for ROS topic"
+     name="camera_name_4" default="FR_side_color"/>
+
+<arg doc="Custom rqt perspective file"
+     name="perspective"
+     default="$(find carmaker_vds_client)/launch/unicaragil_TUM_example.perspective"/>
+
+
+
+<include file="$(find carmaker_vds_client)/launch/carmaker_vds_client.launch">
+  <arg name="camera_name" default="$(arg camera_name_1)"/>
+  <arg name="vds_config" default="0"/>
+  <arg name="delay_factor" default="$(arg delay_factor)"/>
+  <arg name="param_trans_rot" default="[4.813, 0.905, 0.91, 0, 0, -15]"/>
+  <arg name="width" default="1200"/>
+  <arg name="height" default="800"/>
+  <arg name="fov_deg" default="150"/>
+  <arg name="start_movie" default="true"/>
+  <arg name="start_rqt_image_view" default="false"/>
+  </include>
+
+<include file="$(find carmaker_vds_client)/launch/carmaker_vds_client.launch">
+  <arg name="camera_name" default="$(arg camera_name_2)"/>
+  <arg name="vds_config" default="1"/>
+  <arg name="delay_factor" default="$(arg delay_factor)"/>
+  <arg name="param_trans_rot" default="[4.813, -0.905, 0.91, 0, 0, 15]"/>
+  <arg name="width" default="1200"/>
+  <arg name="height" default="800"/>
+  <arg name="fov_deg" default="150"/>
+  <arg name="start_movie" default="true"/>
+  <arg name="start_rqt_image_view" default="false"/>
+  <arg name="startup_delay" default="0" />
+  </include>
+
+<include file="$(find carmaker_vds_client)/launch/carmaker_vds_client.launch">
+  <arg name="camera_name" default="$(arg camera_name_3)"/>
+  <arg name="vds_config" default="4"/>
+  <arg name="delay_factor" default="$(arg delay_factor)"/>
+  <arg name="param_trans_rot" default="[4.74, 0.978, 0.855, 0, 0, 105]"/>
+  <arg name="width" default="1200"/>
+  <arg name="height" default="800"/>
+  <arg name="fov_deg" default="150"/>
+  <arg name="start_movie" default="true"/>
+  <arg name="start_rqt_image_view" default="false"/>
+  </include>
+
+<include file="$(find carmaker_vds_client)/launch/carmaker_vds_client.launch">
+  <arg name="camera_name" default="$(arg camera_name_4)"/>
+  <arg name="vds_config" default="5"/>
+  <arg name="delay_factor" default="$(arg delay_factor)"/>
+  <arg name="param_trans_rot" default="[4.74, -0.978, 0.855, 0, 0, -105]"/>
+  <arg name="width" default="1200"/>
+  <arg name="height" default="800"/>
+  <arg name="fov_deg" default="150"/>
+  <arg name="start_movie" default="true"/>
+  <arg name="start_rqt_image_view" default="false"/> 
+</include>
+
+<node name = "rqt_custom_perspective" pkg = "rqt_gui" type = "rqt_gui" respawn = "false" output = "screen"
+      args = "--perspective-file $(arg perspective)"
+      if="$(arg start_rqt)"/>
+
+</launch>

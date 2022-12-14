@@ -1,0 +1,70 @@
+# Config file autoX.toml for dcmservice
+# Author: Stefan Ackermann <stefan.ackermann@tu-darmstadt.de>
+# Date 29.04.2022
+# Version 2
+# Copyright: MIT License
+# Copyright (c) Stefan Ackermann (2022) <stefan.ackermann@tu-darmstadt.de>
+
+# For autoELF and autoTAXI
+
+title = "autoX"
+
+[debug]
+errmsg = 1 #0: no error messages, 1: error messages
+runtime = 0 #0: no runtime messages, 1: runtime messages
+ussstatus = 0
+radarfstatus = 0
+radarbstatus = 0
+time = 0.1
+operational = 0
+targetobject = 0
+radargatewayerror = 1
+
+[traj]
+trajdt = 0.1 #Time difference between trajectory elements
+ntrajelements = 50 # Number of trajectory elements (without planning pose)
+
+[sensors]
+on = 1 #Switch platform sensors on or of
+
+[uss]
+uss_port = 50001 #Vehicle ECU IP: 192.168.127.56 Port: 7536, Development ECU IP: 192.168.1.5, Port: 7536)
+
+[radar.front]
+radarf_ip = "192.168.127.53"
+radarf_port = 19227
+
+[radar.back]
+radarb_ip = "192.168.127.55"
+radarb_port = 19227
+
+[sensor.radar.front]
+pos = [2237, 0, 0] # in mm, mm, ° Distance to vehicle reference point
+
+[sensor.radar.back]
+pos = [-2212, 0, 180] # in mm, mm, ° Distance to vehicle reference point
+
+[sensor.uss]
+pos = [-1400, 0, 0] # in mm, mm, ° Distance to vehicle reference point
+
+[update_vel]
+comfortable_deceleration_m_s2 = 1.0 #Value for comfortable deceleration for object filtering in m/s²
+target_vmax = 14.0 #Value for assumed maximum velocity of surrounding vehicles in m/s
+static_object_vmax = 0.12 #Assumed maximum speed of a static object in m/s (Datasheet: Geschwindigkeitsauflösung)
+static_object_filter_dist = 10.0 #Minimal distance of static object to emergency path for filter 2 in m
+target_object_dist = 7.0 #Closest distance between ego vehicle reference origin and target object
+fl_corner_dist_xy = [2260, 1060] #Distance to front left corner of UNICARagil vehicle (x and y in vehicle reference frame) in mm
+br_corner_dist_xy = [2240, -1060] #Distance to back right corner of UNICARagil vehicle (x and y in vehicle reference frame) in mm
+vel_buffer_size = 100.0 #Velocity depended factor for buffer size. buffer size per velocity (e.g. 2000 mm for 20 m/s)
+buffer_safety_margin = 1.05 #Buffer safety margin factor
+min_significant_distance = 15.0 #Minimal significant distance to check for obstacles in m, even in standstill
+react_distance = 15.0 #Minimal distance to target object when dcm_shpath reacts
+acc_velocity_profile = 1.0 #Acceleration for velocity profile, if current velocity is lower than original velocity profile in m/s²
+max_velocity_profile = 30.0 #Maximum velocity for intersection check in m/s
+minimal_deceleration = -2.0 #Minimal deceleration for velocity profile in m/s²
+maximal_deceleration = -5.0 #Maximal deceleration for velocity profile in m/s²
+maximal_path_s = 200.0 #Maximal path coordinate s for velocity profile in m
+minimal_object_velocity = 0.1 #Cutoff object velocity for object following or standstill in m/s
+minimal_velocity_deviation = 0.2 #Minimum deviation for Start of velocity correction in m/s
+pt1_jerk_opt_tau_s = 0.05 #PT1 jerk optimization time constant tau in s
+standstillon = 1 #Flag to activate standstill flag in emergency trajectory

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mesh>
+  <vertice x='-2.0' y='1.0' z='0.0' />
+  <vertice x='-2.0' y='-1.0' z='0.0' />
+  <vertice x='2.0' y='-1.0' z='0.0' />
+  <vertice x='2.0' y='1.0' z='0.0' />
+  <vertice x='-2.0' y='1.0' z='1.5' />
+  <vertice x='-2.0' y='-1.0' z='1.5' />
+  <vertice x='2.0' y='-1.0' z='1.5' />
+  <vertice x='2.0' y='1.0' z='1.5' />
+
+  <?info what='bottom'?>
+  <triangle id0='0' id1='1' id2='2' />
+  <triangle id0='0' id1='2' id2='3' />
+
+  <?info what='top'?>
+  <triangle id0='4' id1='5' id2='6' />
+  <triangle id0='4' id1='6' id2='7' />
+
+  <?info what='left'?>
+  <triangle id0='0' id1='3' id2='7' />
+  <triangle id0='0' id1='7' id2='4' />
+
+  <?info what='right'?>
+  <triangle id0='1' id1='2' id2='6' />
+  <triangle id0='1' id1='6' id2='5' />
+
+  <?info what='front'?>
+  <triangle id0='2' id1='3' id2='7' />
+  <triangle id0='2' id1='7' id2='6' />
+
+  <?info what='back'?>
+  <triangle id0='0' id1='1' id2='5' />
+  <triangle id0='0' id1='5' id2='4' />
+</mesh>

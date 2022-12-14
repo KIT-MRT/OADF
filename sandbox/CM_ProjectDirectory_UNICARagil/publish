@@ -1,0 +1,17 @@
+rostopic pub /move_base_simple/goal geometry_msgs/PoseStamped "header: 
+  seq: 0
+  stamp: 
+    secs: 20
+    nsecs: 150000000
+  frame_id: "map"
+pose: 
+  position: 
+    x: -5442.849609375
+    y: -2921.274169921875
+    z: 0.0
+  orientation: 
+    x: 0.0
+    y: 0.0
+    z: 0.2376862654907304
+    w: 0.9713419785003993"
+

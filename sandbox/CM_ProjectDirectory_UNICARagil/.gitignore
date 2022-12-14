@@ -1,0 +1,53 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.linux*
+*.linux64
+*.mex*
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.erg
+#*.sql
+#*.sqlite
+
+# Folders
+##########
+SimInput/*
+SimOutput/*
+Movie/.road_cache
+ros/ros1_ws/build/*
+ros/ros1_ws/devel/*
+!lib/*
+
+# OTHER
+##############
+app_tmp.c
+.cproject
+.project
+.depend
+language.settings.xml
+.ctrl.tcl
+.tmp*
+.settings
+.version*
+*.workspace*

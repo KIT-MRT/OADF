@@ -1,0 +1,5 @@
+[31m[1mCMake Error[0m at /home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/CMakeLists.txt:43 (message):
+  '/opt/ipg/carmaker/linux64-9.1/include' does not exist!
+
+
+make: *** [cmake_check_build_system] Error 1

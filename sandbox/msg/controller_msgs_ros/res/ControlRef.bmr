@@ -1,0 +1,107 @@
+class update_controller_msgs_ros_ControlRef_c269db12179df6a3012b9fc8ee514a04(MessageUpdateRule):
+	old_type = "controller_msgs_ros/ControlRef"
+	old_full_text = """
+# This message holds the input for longitudinal and lateral control.
+# Based on a given trajectory, the control reference server computes current goal points for the underlying control loops.
+# This is necessary, to ensure synchronicity between the two seperated loops.
+# E.g. In case the longitudinal control is not holding up with the specified trajectory,
+# the lateral control loop has to act based on the current real position instead of the "should be" position.
+
+# The control reference therefor computes two control points: A main point (m) and a preview point (p)
+# Information on current state
+float64 velocity
+float64 yawRate
+float64 s_ist
+
+# Main control point
+# Arclength, speed and acceleration
+float64 s_trj
+float64 v_trj
+float64 a_trj
+# Curvature
+float64 C_m
+# Lateral offset
+float64 y_m
+# Yaw rate offset
+float64 dpsi_m
+
+# Preview point
+float64 C_p
+float64 y_p
+float64 dpsi_p
+"""
+
+	new_type = "controller_msgs_ros/ControlRef"
+	new_full_text = """
+# This message holds the input for longitudinal and lateral control.
+# Based on a given trajectory, the control reference server computes current goal points for the underlying control loops.
+# This is necessary, to ensure synchronicity between the two seperated loops.
+# E.g. In case the longitudinal control is not holding up with the specified trajectory,
+# the lateral control loop has to act based on the current real position instead of the "should be" position.
+
+# Header
+Header header
+
+# The control reference therefor computes two control points: A main point (m) and a preview point (p)
+# Information on current state
+float64 velocity
+float64 yawRate
+float64 s_ist
+
+# Main control point
+# Arclength, speed and acceleration
+float64 s_trj
+float64 v_trj
+float64 a_trj
+# Curvature
+float64 C_m
+# Lateral offset
+float64 y_m
+# Yaw rate offset
+float64 dpsi_m
+
+# Preview point
+float64 C_p
+float64 y_p
+float64 dpsi_p
+
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+#
+# sequence ID: consecutively increasing ID
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+# 0: no frame
+# 1: global frame
+string frame_id
+"""
+
+	order = 0
+	migrated_types = []
+
+	valid = True
+
+	def update(self, old_msg, new_msg):
+		#No matching field name in old message
+		new_msg.header = self.get_new_class('std_msgs/Header')()
+		new_msg.velocity = old_msg.velocity
+		new_msg.yawRate = old_msg.yawRate
+		new_msg.s_ist = old_msg.s_ist
+		new_msg.s_trj = old_msg.s_trj
+		new_msg.v_trj = old_msg.v_trj
+		new_msg.a_trj = old_msg.a_trj
+		new_msg.C_m = old_msg.C_m
+		new_msg.y_m = old_msg.y_m
+		new_msg.dpsi_m = old_msg.dpsi_m
+		new_msg.C_p = old_msg.C_p
+		new_msg.y_p = old_msg.y_p
+		new_msg.dpsi_p = old_msg.dpsi_p

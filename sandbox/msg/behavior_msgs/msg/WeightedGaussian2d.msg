@@ -1,0 +1,2 @@
+Gaussian2d distribution
+float32 weight

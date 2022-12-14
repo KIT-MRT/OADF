@@ -1,0 +1,2 @@
+Point[] points
+string role

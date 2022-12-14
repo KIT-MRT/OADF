@@ -1,0 +1,256 @@
+
+#
+# Description:
+# - Visualization for the Driver Trajectory module
+# - Visualize current target point and preview point and driven path of ego vehicle
+# - Colors:
+#   - Yellow = Current trajectory target point
+#   - Green  = Current Vehicle PoI
+#   - Red    = Current relevant IPGDriver Preview Point
+#   - Blue   = Current Trajectory
+#
+# ToDo:
+# - Check Drawing for points
+# - improve drawing mechanism (performance, ...)
+# - Comments
+# - Original static desired course?
+# - ...
+
+
+### BEGIN IPG-MOVIE-INFO
+# Subscribe Vhcl.PoI.x Vhcl.PoI.y Vhcl.PoI.z
+# Subscribe DrvTrj.Mode DrvTrj.PntPre.x  DrvTrj.PntPre.y  DrvTrj.PntTrgt.x DrvTrj.PntTrgt.y
+# Subscribe DrvTrj.User.VisPnts.n
+# Subscribe DrvTrj.User.VisPnts.00.x DrvTrj.User.VisPnts.00.y DrvTrj.User.VisPnts.00.z DrvTrj.User.VisPnts.00.VelAbs DrvTrj.User.VisPnts.00.Yaw
+# Subscribe DrvTrj.User.VisPnts.01.x DrvTrj.User.VisPnts.01.y DrvTrj.User.VisPnts.01.z DrvTrj.User.VisPnts.01.VelAbs DrvTrj.User.VisPnts.01.Yaw
+# Subscribe DrvTrj.User.VisPnts.02.x DrvTrj.User.VisPnts.02.y DrvTrj.User.VisPnts.02.z DrvTrj.User.VisPnts.02.VelAbs DrvTrj.User.VisPnts.02.Yaw
+# Subscribe DrvTrj.User.VisPnts.03.x DrvTrj.User.VisPnts.03.y DrvTrj.User.VisPnts.03.z DrvTrj.User.VisPnts.03.VelAbs DrvTrj.User.VisPnts.03.Yaw
+# Subscribe DrvTrj.User.VisPnts.04.x DrvTrj.User.VisPnts.04.y DrvTrj.User.VisPnts.04.z DrvTrj.User.VisPnts.04.VelAbs DrvTrj.User.VisPnts.04.Yaw
+# Subscribe DrvTrj.User.VisPnts.05.x DrvTrj.User.VisPnts.05.y DrvTrj.User.VisPnts.05.z DrvTrj.User.VisPnts.05.VelAbs DrvTrj.User.VisPnts.05.Yaw
+# Subscribe DrvTrj.User.VisPnts.06.x DrvTrj.User.VisPnts.06.y DrvTrj.User.VisPnts.06.z DrvTrj.User.VisPnts.06.VelAbs DrvTrj.User.VisPnts.06.Yaw
+# Subscribe DrvTrj.User.VisPnts.07.x DrvTrj.User.VisPnts.07.y DrvTrj.User.VisPnts.07.z DrvTrj.User.VisPnts.07.VelAbs DrvTrj.User.VisPnts.07.Yaw
+# Subscribe DrvTrj.User.VisPnts.08.x DrvTrj.User.VisPnts.08.y DrvTrj.User.VisPnts.08.z DrvTrj.User.VisPnts.08.VelAbs DrvTrj.User.VisPnts.08.Yaw
+# Subscribe DrvTrj.User.VisPnts.09.x DrvTrj.User.VisPnts.09.y DrvTrj.User.VisPnts.09.z DrvTrj.User.VisPnts.09.VelAbs DrvTrj.User.VisPnts.09.Yaw
+# Subscribe DrvTrj.User.VisPnts.10.x DrvTrj.User.VisPnts.10.y DrvTrj.User.VisPnts.10.z DrvTrj.User.VisPnts.10.VelAbs DrvTrj.User.VisPnts.10.Yaw
+# Subscribe DrvTrj.User.VisPnts.11.x DrvTrj.User.VisPnts.11.y DrvTrj.User.VisPnts.11.z DrvTrj.User.VisPnts.11.VelAbs DrvTrj.User.VisPnts.11.Yaw
+# Subscribe DrvTrj.User.VisPnts.12.x DrvTrj.User.VisPnts.12.y DrvTrj.User.VisPnts.12.z DrvTrj.User.VisPnts.12.VelAbs DrvTrj.User.VisPnts.12.Yaw
+# Subscribe DrvTrj.User.VisPnts.13.x DrvTrj.User.VisPnts.13.y DrvTrj.User.VisPnts.13.z DrvTrj.User.VisPnts.13.VelAbs DrvTrj.User.VisPnts.13.Yaw
+# Subscribe DrvTrj.User.VisPnts.14.x DrvTrj.User.VisPnts.14.y DrvTrj.User.VisPnts.14.z DrvTrj.User.VisPnts.14.VelAbs DrvTrj.User.VisPnts.14.Yaw
+# Subscribe DrvTrj.User.VisPnts.15.x DrvTrj.User.VisPnts.15.y DrvTrj.User.VisPnts.15.z DrvTrj.User.VisPnts.15.VelAbs DrvTrj.User.VisPnts.15.Yaw
+# Subscribe DrvTrj.User.VisPnts.16.x DrvTrj.User.VisPnts.16.y DrvTrj.User.VisPnts.16.z DrvTrj.User.VisPnts.16.VelAbs DrvTrj.User.VisPnts.16.Yaw
+# Subscribe DrvTrj.User.VisPnts.17.x DrvTrj.User.VisPnts.17.y DrvTrj.User.VisPnts.17.z DrvTrj.User.VisPnts.17.VelAbs DrvTrj.User.VisPnts.17.Yaw
+# Subscribe DrvTrj.User.VisPnts.18.x DrvTrj.User.VisPnts.18.y DrvTrj.User.VisPnts.18.z DrvTrj.User.VisPnts.18.VelAbs DrvTrj.User.VisPnts.18.Yaw
+# Subscribe DrvTrj.User.VisPnts.19.x DrvTrj.User.VisPnts.19.y DrvTrj.User.VisPnts.19.z DrvTrj.User.VisPnts.19.VelAbs DrvTrj.User.VisPnts.19.Yaw
+# Subscribe DrvTrj.User.VisPnts.20.x DrvTrj.User.VisPnts.20.y DrvTrj.User.VisPnts.20.z DrvTrj.User.VisPnts.20.VelAbs DrvTrj.User.VisPnts.20.Yaw
+# Subscribe DrvTrj.User.VisPnts.21.x DrvTrj.User.VisPnts.21.y DrvTrj.User.VisPnts.21.z DrvTrj.User.VisPnts.21.VelAbs DrvTrj.User.VisPnts.21.Yaw
+# Subscribe DrvTrj.User.VisPnts.22.x DrvTrj.User.VisPnts.22.y DrvTrj.User.VisPnts.22.z DrvTrj.User.VisPnts.22.VelAbs DrvTrj.User.VisPnts.22.Yaw
+# Subscribe DrvTrj.User.VisPnts.23.x DrvTrj.User.VisPnts.23.y DrvTrj.User.VisPnts.23.z DrvTrj.User.VisPnts.23.VelAbs DrvTrj.User.VisPnts.23.Yaw
+# Subscribe DrvTrj.User.VisPnts.24.x DrvTrj.User.VisPnts.24.y DrvTrj.User.VisPnts.24.z DrvTrj.User.VisPnts.24.VelAbs DrvTrj.User.VisPnts.24.Yaw
+# Subscribe DrvTrj.User.VisPnts.25.x DrvTrj.User.VisPnts.25.y DrvTrj.User.VisPnts.25.z DrvTrj.User.VisPnts.25.VelAbs DrvTrj.User.VisPnts.25.Yaw
+# Subscribe DrvTrj.User.VisPnts.26.x DrvTrj.User.VisPnts.26.y DrvTrj.User.VisPnts.26.z DrvTrj.User.VisPnts.26.VelAbs DrvTrj.User.VisPnts.26.Yaw
+# Subscribe DrvTrj.User.VisPnts.27.x DrvTrj.User.VisPnts.27.y DrvTrj.User.VisPnts.27.z DrvTrj.User.VisPnts.27.VelAbs DrvTrj.User.VisPnts.27.Yaw
+# Subscribe DrvTrj.User.VisPnts.28.x DrvTrj.User.VisPnts.28.y DrvTrj.User.VisPnts.28.z DrvTrj.User.VisPnts.28.VelAbs DrvTrj.User.VisPnts.28.Yaw
+# Subscribe DrvTrj.User.VisPnts.29.x DrvTrj.User.VisPnts.29.y DrvTrj.User.VisPnts.29.z DrvTrj.User.VisPnts.29.VelAbs DrvTrj.User.VisPnts.29.Yaw
+# Subscribe DrvTrj.User.VisPnts.30.x DrvTrj.User.VisPnts.30.y DrvTrj.User.VisPnts.30.z DrvTrj.User.VisPnts.30.VelAbs DrvTrj.User.VisPnts.30.Yaw
+# Subscribe DrvTrj.User.VisPnts.31.x DrvTrj.User.VisPnts.31.y DrvTrj.User.VisPnts.31.z DrvTrj.User.VisPnts.31.VelAbs DrvTrj.User.VisPnts.31.Yaw
+# Subscribe DrvTrj.User.VisPnts.32.x DrvTrj.User.VisPnts.32.y DrvTrj.User.VisPnts.32.z DrvTrj.User.VisPnts.32.VelAbs DrvTrj.User.VisPnts.32.Yaw
+# Subscribe DrvTrj.User.VisPnts.33.x DrvTrj.User.VisPnts.33.y DrvTrj.User.VisPnts.33.z DrvTrj.User.VisPnts.33.VelAbs DrvTrj.User.VisPnts.33.Yaw
+# Subscribe DrvTrj.User.VisPnts.34.x DrvTrj.User.VisPnts.34.y DrvTrj.User.VisPnts.34.z DrvTrj.User.VisPnts.34.VelAbs DrvTrj.User.VisPnts.34.Yaw
+# Subscribe DrvTrj.User.VisPnts.35.x DrvTrj.User.VisPnts.35.y DrvTrj.User.VisPnts.35.z DrvTrj.User.VisPnts.35.VelAbs DrvTrj.User.VisPnts.35.Yaw
+# Subscribe DrvTrj.User.VisPnts.36.x DrvTrj.User.VisPnts.36.y DrvTrj.User.VisPnts.36.z DrvTrj.User.VisPnts.36.VelAbs DrvTrj.User.VisPnts.36.Yaw
+# Subscribe DrvTrj.User.VisPnts.37.x DrvTrj.User.VisPnts.37.y DrvTrj.User.VisPnts.37.z DrvTrj.User.VisPnts.37.VelAbs DrvTrj.User.VisPnts.37.Yaw
+# Subscribe DrvTrj.User.VisPnts.38.x DrvTrj.User.VisPnts.38.y DrvTrj.User.VisPnts.38.z DrvTrj.User.VisPnts.38.VelAbs DrvTrj.User.VisPnts.38.Yaw
+# Subscribe DrvTrj.User.VisPnts.39.x DrvTrj.User.VisPnts.39.y DrvTrj.User.VisPnts.39.z DrvTrj.User.VisPnts.39.VelAbs DrvTrj.User.VisPnts.39.Yaw
+# Subscribe DrvTrj.User.VisPnts.40.x DrvTrj.User.VisPnts.40.y DrvTrj.User.VisPnts.40.z DrvTrj.User.VisPnts.40.VelAbs DrvTrj.User.VisPnts.40.Yaw
+# Subscribe DrvTrj.User.VisPnts.41.x DrvTrj.User.VisPnts.41.y DrvTrj.User.VisPnts.41.z DrvTrj.User.VisPnts.41.VelAbs DrvTrj.User.VisPnts.41.Yaw
+# Subscribe DrvTrj.User.VisPnts.42.x DrvTrj.User.VisPnts.42.y DrvTrj.User.VisPnts.42.z DrvTrj.User.VisPnts.42.VelAbs DrvTrj.User.VisPnts.42.Yaw
+# Subscribe DrvTrj.User.VisPnts.43.x DrvTrj.User.VisPnts.43.y DrvTrj.User.VisPnts.43.z DrvTrj.User.VisPnts.43.VelAbs DrvTrj.User.VisPnts.43.Yaw
+# Subscribe DrvTrj.User.VisPnts.44.x DrvTrj.User.VisPnts.44.y DrvTrj.User.VisPnts.44.z DrvTrj.User.VisPnts.44.VelAbs DrvTrj.User.VisPnts.44.Yaw
+# Subscribe DrvTrj.User.VisPnts.45.x DrvTrj.User.VisPnts.45.y DrvTrj.User.VisPnts.45.z DrvTrj.User.VisPnts.45.VelAbs DrvTrj.User.VisPnts.45.Yaw
+# Subscribe DrvTrj.User.VisPnts.46.x DrvTrj.User.VisPnts.46.y DrvTrj.User.VisPnts.46.z DrvTrj.User.VisPnts.46.VelAbs DrvTrj.User.VisPnts.46.Yaw
+# Subscribe DrvTrj.User.VisPnts.47.x DrvTrj.User.VisPnts.47.y DrvTrj.User.VisPnts.47.z DrvTrj.User.VisPnts.47.VelAbs DrvTrj.User.VisPnts.47.Yaw
+# Subscribe DrvTrj.User.VisPnts.48.x DrvTrj.User.VisPnts.48.y DrvTrj.User.VisPnts.48.z DrvTrj.User.VisPnts.48.VelAbs DrvTrj.User.VisPnts.48.Yaw
+# Subscribe DrvTrj.User.VisPnts.49.x DrvTrj.User.VisPnts.49.y DrvTrj.User.VisPnts.49.z DrvTrj.User.VisPnts.49.VelAbs DrvTrj.User.VisPnts.49.Yaw
+### END IPG-MOVIE-INFO
+
+array unset DrvTrj *
+set DrvTrj(Data)        ""     ; # Filled during runtime for visualization of history
+set DrvTrj(Width)        0.05  ; # Default width of line
+set DrvTrj(Height)      -0.4   ; # Default offset for height of line
+set DrvTrj(Vis.PntTrgt) 1      ; # Enable visualization for current trajectory target point
+set DrvTrj(Vis.VhclPoI) 1      ; # Enable visualization for current vehicle PoI
+set DrvTrj(Vis.PntPre)  1      ; # Enable visualization for current preview point
+set DrvTrj(Vis.Trj)     1      ; # Enable visualization for current trajectory
+
+proc DrawStart {} {
+
+    global Qu ; # global Movie Quantitiy List
+    variable DrvTrj
+
+    # Collect data for curent frame
+    if { $DrvTrj(Data) eq "" || ![dict exists $DrvTrj(Data) $Qu(Time)]} {
+
+        # Current simulation time is used as reference
+        dict set DrvTrj(Data) $Qu(Time) \
+                            [list \
+                            $Qu(Vhcl.PoI.x) \
+                            $Qu(Vhcl.PoI.y) \
+                            [expr {$Qu(Vhcl.PoI.z)+$DrvTrj(Height)}] \
+                            $Qu(Vhcl.Distance) \
+                            $Qu(Vhcl.Yaw) \
+                            $Qu(Vhcl.Roll) \
+                            $Qu(DrvTrj.PntPre.x) \
+                            $Qu(DrvTrj.PntPre.y) \
+                            $Qu(DrvTrj.PntTrgt.x) \
+                            $Qu(DrvTrj.PntTrgt.y) \
+                            $Qu(DrvTrj.Mode)]
+    }
+
+    # Sort data by time (this proc is only called every Movie Frame)
+    set data [lsort -real [dict keys $DrvTrj(Data)]]
+
+    # Delete old values (ToDo)
+    if {[llength $data] < 3} {
+        while {[lindex $data end] > $Qu(Time)} {
+            set DrvTrj(Data) [dict remove $DrvTrj(Data) [lindex $data end]]
+            set data [lsort -real [dict keys $DrvTrj(Data)]]
+        }
+    }
+
+    # Start drawing with new matrix
+    gl pushmatrix
+    glDisableLighting
+
+
+if {$DrvTrj(Vis.VhclPoI)} {
+    ############################################################################
+    # Driven vehicle course in PoI plus z-offset
+    ############################################################################
+    gl color 0 1 0 1; #Green
+    gl begin quad_strip
+    
+    # Run through all collected data points
+    foreach key_act $data {
+
+        set elm [dict get $DrvTrj(Data) $key_act]
+	set val_x [expr {0.5*$DrvTrj(Width)*sin([lindex $elm 4])}]
+	set val_y [expr {0.5*$DrvTrj(Width)*cos([lindex $elm 4])}]
+	set val_z [expr {0.5*$DrvTrj(Width)*sin([lindex $elm 5])}]
+
+	gl vertex [expr {[lindex $elm 0] + $val_x}] \
+		  [expr {[lindex $elm 1] - $val_y - tan($val_z)}] \
+		  [expr {[lindex $elm 2] - $val_z}]
+
+	gl vertex [expr {[lindex $elm 0] - $val_x}] \
+		  [expr {[lindex $elm 1] + $val_y - tan($val_z)}] \
+		  [expr {[lindex $elm 2] + $val_z}]
+    }
+    gl end
+}
+
+
+if {$DrvTrj(Vis.PntTrgt)} {
+    ############################################################################
+    # Current target trajectory plus z-offset
+    ############################################################################
+    gl color 1 1 0 1; #Yellow
+    gl begin quad_strip
+    
+    # Run through all collected data points
+    foreach key_act $data {
+
+        if {$key_act > $Qu(Time)} {
+            break
+        }
+        
+        set elm [dict get $DrvTrj(Data) $key_act]
+        set active [lindex $elm 10]
+        
+        if {$active == 1 && [lindex $elm 8] != 0} {
+        set val_z      [expr {-0.01 + 0.5*$DrvTrj(Width)*sin([lindex $elm 5])}]
+        set new_val_x0 [expr {0.5*$DrvTrj(Width)*sin([lindex $elm 4])}]
+        set new_val_y0 [expr {0.5*$DrvTrj(Width)*cos([lindex $elm 4])}]
+
+        gl vertex      [expr {[lindex $elm 8] + $new_val_x0}] \
+                       [expr {[lindex $elm 9] - $new_val_y0}] \
+                       [expr {[lindex $elm 2] - $val_z}]
+
+        gl vertex      [expr {[lindex $elm 8] - $new_val_x0}] \
+                       [expr {[lindex $elm 9] + $new_val_y0}] \
+                       [expr {[lindex $elm 2] - $val_z}]
+	}
+    }
+    gl end
+}
+
+
+if {$DrvTrj(Vis.PntPre)} {
+    ############################################################################
+    # Driver preview distance plus z-offset
+    ############################################################################
+    gl color 1 0 0 1; #Red
+    gl begin quad_strip
+
+    # Run through all collected data points
+    foreach key_act $data {
+
+        if {$key_act > $Qu(Time)} {
+            break
+        }
+
+        set elm [dict get $DrvTrj(Data) $key_act]
+        set active [lindex $elm 10]
+        
+        if {$active == 1 && [lindex $elm 6] != 0} {
+        set val_z      [expr {0.01 + 0.5*$DrvTrj(Width)*sin([lindex $elm 5])}]
+        set new_val_x0 [expr {2*0.5*$DrvTrj(Width)*sin([lindex $elm 4])}]
+        set new_val_y0 [expr {2*0.5*$DrvTrj(Width)*cos([lindex $elm 4])}]
+        gl vertex      [expr {[lindex $elm 6] + $new_val_x0}] \
+                       [expr {[lindex $elm 7] - $new_val_y0}] \
+                       [expr {[lindex $elm 2] - $val_z}]
+
+        gl vertex      [expr {[lindex $elm 6] - $new_val_x0}] \
+                       [expr {[lindex $elm 7] + $new_val_y0}] \
+                       [expr {[lindex $elm 2] - $val_z}]
+	}
+    }
+    gl end
+}
+
+
+if {$DrvTrj(Vis.Trj)} {
+    ############################################################################
+    # Draw current trajectory
+    ############################################################################
+    gl color 0 0 1 1; # Blue
+    gl begin quad_strip
+
+    # Run through all collected data points
+
+    set width  [expr {$DrvTrj(Width)*3.0}]
+    set height [expr {$DrvTrj(Height) +0.6}]
+
+    for {set i 0} {$i < $Qu(DrvTrj.User.VisPnts.n)} {incr i} {
+
+	set val_x [expr {0.5*$width*sin($Qu(DrvTrj.User.VisPnts.[format %02d $i].Yaw))}]
+	set val_y [expr {0.5*$width*cos($Qu(DrvTrj.User.VisPnts.[format %02d $i].Yaw))}]
+	set val_z [expr {0.5*$width*sin($Qu(Vhcl.Roll))}]
+
+	gl vertex [expr {$Qu(DrvTrj.User.VisPnts.[format %02d $i].x) + $val_x}] \
+		  [expr {$Qu(DrvTrj.User.VisPnts.[format %02d $i].y) - $val_y - tan($val_z)}] \
+		  [expr {$Qu(DrvTrj.User.VisPnts.[format %02d $i].z) - $val_z + $height}]
+
+	gl vertex [expr {$Qu(DrvTrj.User.VisPnts.[format %02d $i].x) - $val_x}] \
+		  [expr {$Qu(DrvTrj.User.VisPnts.[format %02d $i].y) + $val_y - tan($val_z)}] \
+		  [expr {$Qu(DrvTrj.User.VisPnts.[format %02d $i].z) + $val_z + $height}]
+    }
+    gl end
+}
+
+
+    # Finish drawing with this matrix
+    glEnableLighting
+    gl popmatrix
+}
+
+return -1

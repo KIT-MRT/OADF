@@ -1,0 +1,330 @@
+<?xml version="1.0"?>
+<launch>
+<arg name="config" default="$(find lanelet_map_launch)/res/parameters.yaml" />
+
+<!--    <arg name="lanelet_map_filename" value="$(find lanelet_map_launch)/res/carmaker_loc_1.osm" /> -->
+<arg name="map" default='none'/>
+<arg name="route" default='none'/>
+<arg name="controller" default='full'/>
+<arg name="planner" default='active'/>
+<arg name="behavior" default='active'/>
+
+<!-- <arg name="simulation" /> -->
+<!-- <arg name="simulation" default='none'/> -->
+
+<arg name="lanelet_ids_on_route" value="$(arg route)" unless="$(eval arg('route') == 'none')" />
+
+<arg name="lanelet_map_filename" value="$(find lanelet_map_launch)/res/spiral.osm" if="$(eval arg('map') == 'spiral')"/>
+<arg name="map_center_lat" value="49.8547336888119758668835856951773166656494" if="$(eval arg('map') == 'spiral')"/>
+<arg name="map_center_lon" value="8.5875600835741394689648586791008710861206" if="$(eval arg('map') == 'spiral')"/>
+<arg name="lanelet_ids_on_route" value="20000000 20000003" if="$(eval ((arg('map') == 'spiral') and (arg('route') == 'none')))"/>
+<arg name="projection" value="+proj=tmerc +a=6378137 +b=6378137 +lon_0=8.5875600835741377 +x_0=-0 +y_0=-5549803.5678728055 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs" if="$(eval arg('map') == 'spiral')"/>
+<arg name="parking" value="false" if="$(eval arg('map') == 'spiral')"/>
+<arg name="simulation" value="true" if="$(eval arg('map') == 'spiral')"/>
+<arg name="perception" value="false" if="$(eval arg('map') == 'spiral')" />
+<arg name="coincar_sim" value="false" if="$(eval arg('map') == 'spiral')"/>
+<arg name="coincar_controller" value="false" if="$(eval arg('map') == 'spiral')"/>
+
+<arg name="lanelet_map_filename" value="$(find lanelet_map_launch)/res/ramp.osm" if="$(eval arg('map') == 'ramp')"/>
+<arg name="map_center_lat" value="49.8547336888119758668835856951773166656494" if="$(eval arg('map') == 'ramp')"/>
+<arg name="map_center_lon" value="8.5875600835741394689648586791008710861206" if="$(eval arg('map') == 'ramp')"/>
+<arg name="lanelet_ids_on_route" value="20000000 20000001" if="$(eval ((arg('map') == 'ramp') and (arg('route') == 'none')))"/>
+<arg name="projection" value="+proj=tmerc +a=6378137 +b=6378137 +lon_0=8.5875600835741377 +x_0=-0 +y_0=-5549803.5678728055 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs" if="$(eval arg('map') == 'ramp')"/>
+<arg name="parking" value="false" if="$(eval arg('map') == 'ramp')"/>
+<arg name="simulation" value="true" if="$(eval arg('map') == 'ramp')"/>
+<arg name="perception" value="false" if="$(eval arg('map') == 'ramp')" />
+<arg name="coincar_sim" value="false" if="$(eval arg('map') == 'ramp')"/>
+<arg name="coincar_controller" value="false" if="$(eval arg('map') == 'ramp')"/>
+
+<arg name="lanelet_map_filename" value="$(find lanelet_map_launch)/res/campus_east_full_bidirectional_split.osm" if="$(eval arg('map') == 'campus-ost-coincar')"/>
+<arg name="map_center_lat" value="49.01439" if="$(eval arg('map') == 'campus-ost-coincar')"/>
+<arg name="map_center_lon" value="8.41722" if="$(eval arg('map') == 'campus-ost-coincar')"/>
+<arg name="lanelet_ids_on_route" value="1219 1260" if="$(eval ((arg('map') == 'campus-ost-coincar') and (arg('route') == 'none')))"/>
+<arg name="projection" value="+proj=tmerc +a=6378137 +b=6378137 +lon_0=8.4459825607590666 +x_0=-0 +y_0=-5456474.4957031412 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs" if="$(eval arg('map') == 'campus-ost-coincar')"/>
+<arg name="parking" value="false" if="$(eval arg('map') == 'campus-ost-coincar')"/>
+<arg name="simulation" value="true" if="$(eval arg('map') == 'campus-ost-coincar')"/>
+<arg name="perception" value="false" if="$(eval arg('map') == 'campus-ost-coincar')" />
+<arg name="coincar_sim" value="true" if="$(eval arg('map') == 'campus-ost-coincar')"/>
+<arg name="coincar_controller" value="$(arg controller)" if="$(eval arg('map') == 'campus-ost-coincar')"/>
+<arg name="roadmap_file" value="$(find lanelet_map_launch)/res/campus_east_full_roadmap.osm" if="$(eval arg('map') == 'campus-ost-coincar')"/>
+
+<arg name="lanelet_map_filename" value="$(find lanelet_map_launch)/res/ludwigsburg_large.osm" if="$(eval arg('map') == 'ludwigsburg-coincar')"/>
+<arg name="map_center_lat" value="49.01439" if="$(eval arg('map') == 'ludwigsburg-coincar')"/>
+<arg name="map_center_lon" value="8.41722" if="$(eval arg('map') == 'ludwigsburg-coincar')"/>
+<arg name="lanelet_ids_on_route" value="14161 28918" if="$(eval ((arg('map') == 'ludwigsburg-coincar') and (arg('route') == 'none')))"/>
+<arg name="projection" value="+proj=tmerc +a=6378137 +b=6378137 +lon_0=8.4459825607590666 +x_0=-0 +y_0=-5456474.4957031412 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs" if="$(eval arg('map') == 'ludwigsburg-coincar')"/>
+<arg name="parking" value="false" if="$(eval arg('map') == 'ludwigsburg-coincar')"/>
+<arg name="simulation" value="true" if="$(eval arg('map') == 'ludwigsburg-coincar')"/>
+<arg name="perception" value="false" if="$(eval arg('map') == 'ludwigsburg-coincar')" />
+<arg name="coincar_sim" value="true" if="$(eval arg('map') == 'ludwigsburg-coincar')"/>
+<arg name="coincar_controller" value="$(arg controller)" if="$(eval arg('map') == 'ludwigsburg-coincar')"/>
+<arg name="roadmap_file" value="$(find lanelet_map_launch)/res/ludwigsburg_large_roadmap.osm" if="$(eval arg('map') == 'ludwigsburg-coincar')"/>
+
+<arg name="lanelet_map_filename" value="$(find lanelet_map_launch)/res/straight.osm" if="$(eval arg('map') == 'straight')"/>
+<arg name="map_center_lat" value="49.8547336888119758668835856951773166656494" if="$(eval arg('map') == 'straight')"/>
+<arg name="map_center_lon" value="8.5875600835741394689648586791008710861206" if="$(eval arg('map') == 'straight')"/>
+<arg name="lanelet_ids_on_route" value="20000000 20000001" if="$(eval ((arg('map') == 'straight') and (arg('route') == 'none')))"/>
+<arg name="projection" value="+proj=tmerc +a=6378137 +b=6378137 +lon_0=8.5875600835741377 +x_0=-0 +y_0=-5549803.5678728055 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs" if="$(eval arg('map') == 'straight')"/>
+<arg name="parking" value="false" if="$(eval arg('map') == 'straight')"/>
+<arg name="simulation" value="true" if="$(eval arg('map') == 'straight')"/>
+<arg name="perception" value="false" if="$(eval arg('map') == 'straight')" />
+<arg name="coincar_sim" value="false" if="$(eval arg('map') == 'straight')"/>
+<arg name="coincar_controller" value="false" if="$(eval arg('map') == 'straight')"/>
+
+<!--- DEFAULT FOR LOAD FROM FILE!!!!! -->
+<arg name="lanelet_map_filename" value='none' if="$(eval arg('map') == 'none')" />
+<arg name="map_center_lat" value='none' if="$(eval arg('map') == 'none')"/>
+<arg name="map_center_lon" value='none' if="$(eval arg('map') == 'none')"/>
+<arg name="lanelet_ids_on_route" value='none' if="$(eval ((arg('map') == 'none') and (arg('route') == 'none')))" />
+<arg name="projection" value='none' if="$(eval arg('map') == 'none')"/>
+<arg name="parking" value='none' if="$(eval arg('map') == 'none')"/>
+<arg name="simulation" value='none' if="$(eval arg('map') == 'none')" />
+<arg name="perception" value='none' if="$(eval arg('map') == 'none')"/>
+
+
+<arg name="map_frame_with_offset" value="map"/>
+<arg name="actual_utm_frame_no_offset" value="actual_utm_no_offset"/>
+<arg name="loc_mgmt_frame_id" default="odom"/>
+
+
+    <!-- Prediction -->
+    <include file="$(find scene_understanding_simulation_ros_module)/launch/prediction_pipeline.launch">
+        <arg name="prediction_horizon" value="8." />
+        <arg name="ignore_static_objects" value="true" />
+        <arg name="target_frame_prediction" value="map" />
+        <arg name="predicted_objects_out_topic_with_ns" value="/prediction/predicted_objects" />
+
+        <arg name="static_objects_in_topic_with_ns" value="/perception/sceneshot/obstacles_NOT_IN_SIMULATION" />
+        <arg name="tracked_objects_in_topic_with_ns" value="/objects" />
+        <arg name="ego_motion_in_topic_with_ns" value="/motion_state" />
+    </include>
+
+	<include file="$(find planning_2d_pipeline_ros_module)/launch/planning_2d_pipeline.launch">
+          <arg name="test_safety_planner_mode" value="false" />
+
+	  <arg name="continuous_control_frame_id" value="odom" />
+	  <arg name="vehicle_frame_id" value="vehicle"/>
+	  <arg name="lateral_control_only" value="false" />
+
+	  <arg name="ego_motion_in_topic_with_ns" value="/motion_state" />
+	  <arg name="steering_angle_from_actuator_in_topic_with_ns" value="stering_angle"/>
+	  <arg name="steering_angle_out_topic_with_ns" value="steering_angle_out"/>
+	  <arg name="steering_angle_smoothed_out_topic_with_ns" value="steering_angle_smooth"/>
+	  <arg name="acceleration_out_topic_with_ns" value="acc" />
+	  <arg name="static_objects_in_topic_with_ns" value="/perception/sceneshot/obstacles_NOT_IN_SIMULATION" />
+	  <arg name="predicted_dynamic_objects_in_topic_with_ns" value="/prediction/predicted_objects" />
+          <arg name="desired_time_step_milliseconds" value="100" />
+          <arg name="prediction_horizon_seconds" value="5.1" />
+          <arg name="lowlevel_ego_state_in_topic_with_ns" value="/controller_ready" />
+	  <arg name="virtual_stoplines_override_in_topic_with_ns" value="/behaviour/change_virtual_stop"/>
+	  <arg name="pedestrian_prediction_in_topic_with_ns" value="/prediction/pedestrian/sim_dummy" />
+	  <arg name="traffic_light_states_in_topic_with_ns" value="/behavior/traffic_light_state" />
+	  <arg name="virtual_stoplines_state_out_topic_with_ns" value="/behaviour/actions_info"/>
+          <arg name="lanelet_ids_on_route" value="$(arg lanelet_ids_on_route)"/>
+         <!-- <arg name="lanelet_ids_on_route" value="10000009 10000513" /> -->
+	  <arg name="ignore_static_objects" value="true" />
+          <arg name="simulation" value="$(arg simulation)"/>
+          <arg name="conflict_zones_out_topic_with_ns" value="/behavior/conflict_zones"/>
+          <arg name="indicator_out_topic_with_ns" value="/behavior/indicator"/>
+          <arg name="arbitration_yaml_out_topic_with_ns" value="/behavior/arbitration_yaml_debug"/>
+          <arg name="vehicle_characteristics_file" value="$(find vehicle_characteristics)/res/characteristics_ekla.yaml"/>
+          <arg name="planner" value="$(arg planner)" />
+          <arg name="behavior" value="$(arg behavior)" />
+          <arg name="lat_origin" value="$(arg map_center_lat)" />
+          <arg name="lon_origin" value="$(arg map_center_lon)" />
+
+
+
+
+	</include>
+
+
+
+    <!-- set up lanelet2_interface_ros -->
+    <include file="$(find lanelet2_interface_ros)/launch/set_lanelet_map.launch">
+      <arg name="map_file_name" value="$(arg lanelet_map_filename)" />
+      <arg name="lat_origin" value="$(arg map_center_lat)" />
+      <arg name="lon_origin" value="$(arg map_center_lon)" />
+      <arg name="map_frame_with_offset" value="$(arg map_frame_with_offset)" />
+      <arg name="actual_utm_frame_no_offset" value="$(arg actual_utm_frame_no_offset)" />
+    </include>
+
+    <!-- for osm_plugin (which still uses gnss_coordinate_transform_ros) -->
+    <arg name="map_config" default="/tmp/map/map_parameters.yaml" />
+    <rosparam command="load" file="$(arg map_config)" subst_value="true" if="$(eval arg('lanelet_map_filename') == 'none')" />
+    <param name="/lanelet_map_filename" value="$(arg lanelet_map_filename)" if="$(eval arg('lanelet_map_filename') != 'none')"/>
+    <include file="$(find lanelet_map_launch)/launch/pose_stamped_launchfile_publisher.launch" >
+        <arg name="publisher_name" value="pose_for_gnss_transform_publisher" />
+        <arg name="py" value="$(arg map_center_lat)" />
+        <arg name="px" value="$(arg map_center_lon)" />
+        <arg name="topic" value="/local_xy_origin" />
+        <arg name="tf_frame_id" value="$(arg map_frame_with_offset)" />
+        <arg name="publishing_frequency" value="10" />
+    </include>
+
+    <!-- set up map_odom_interface_ros -->
+    <include file="$(find map_odom_interface_ros)/launch/set_map_odom_frames.launch">
+      <arg name="odom_frame_id" value="odom" />
+      <arg name="map_frame_id" value="map" />
+    </include>
+
+    <include file="$(find carmaker_trajectory_wrapper_ros_tool)/launch/carmaker_trajectory_wrapper_ros_tool_node.launch">
+	  <arg name="lat_origin" value="$(arg map_center_lat)" />
+	  <arg name="lon_origin" value="$(arg map_center_lon)" />
+          <arg name="projection" value="$(arg projection)" />
+          <arg name="parking_planner" value="$(arg parking)" />
+          <arg name="simulation" value="$(arg simulation)" />
+          <arg name="publish_obstacles" value="$(arg simulation)" />
+
+
+    </include>
+
+    <include file="$(find atlatec_wrapper_ros_tool)/launch/atlatec_wrapper_ros_tool_node.launch">
+      <arg name="lat_origin" value="$(arg map_center_lat)" />
+      <arg name="lon_origin" value="$(arg map_center_lon)" />
+      <arg name="sensor_modules" value="$(arg perception)" />
+      <arg name="simulation" value="$(arg simulation)" />
+
+
+    </include>
+    <include file="$(find localization_fusion_ros_tool)/launch/localization_fusion_node.launch">
+      <arg name="simulation" value="$(arg simulation)" />
+    </include>
+
+
+  <include file="$(find parking_planner_ros_tool)/launch/parking_planner_ros_tool_node.launch">
+      <!-- <arg name="parking" value="$(arg parking)"/> -->
+      <arg name="parking" value="true"/>
+  </include>
+
+  <include file="$(find map_odom_interface_ros)/launch/set_map_odom_identity.launch">
+        <arg name="simulation" value="$(arg simulation)"/>
+  </include>
+
+  <!-- <include file="$(find mrt_ros_asoa_bridge)/launch/unicar_asoa_trajectory_converter.launch">
+      <arg name="simulation" value="$(arg simulation)"/>
+  </include> -->
+
+  <include file="$(find mrt_ros_asoa_bridge)/launch/unicar_asoa_controller_state_bridge.launch">
+  </include>
+
+  <include file="$(find ulm_wrapper_ros_tool)/launch/ulm_wrapper_ros_tool_node.launch">
+    <arg name="lat_origin" value="$(arg map_center_lat)" />
+    <arg name="lon_origin" value="$(arg map_center_lon)" />
+    <arg name="perception" value="$(arg perception)" />
+  </include>
+
+
+<!--- COINCAR SIMULATION -->
+  <include file="$(find simulation_management_ros_tool)/launch/simulation_management.launch" ns="sim" if="$(arg coincar_sim)">
+    <arg name="objects_ground_truth_topic_with_ns" value="/sim/objects_ground_truth" />
+    <arg name="desired_motion_topic_with_ns" value="/sim/desired_motion" />
+    <arg name="desired_motion_absolute_topic_with_ns" value="/sim/desired_motion_absolute" />
+    <arg name="object_initialization_topic_with_ns" value="/sim/object_initialization" />
+    <arg name="object_removal_topic_with_ns" value="/sim/object_removal" />
+    <arg name="fixed_frame" value="map" />
+  </include>
+
+
+  <include file="$(find lanelet_map_launch)/launch/vehicle_launchfiles/ego_wrapper.launch" if="$(arg coincar_sim)">
+        <arg name="vehicle_id" value="0" />
+        <arg name="vehicle_ns" value="/" />
+
+        <arg name="objects_ground_truth_topic_with_ns" value="/sim/objects_ground_truth" />
+        <arg name="desired_motion_absolute_topic_with_ns" value="/sim/desired_motion_absolute" />
+
+        <arg name="use_planner" value="true" />
+        <arg name="use_behavior_approval" value="true" />
+
+        <arg name="object_initialization_topic_with_ns" value="/sim/object_initialization" />
+        <arg name="initial_v" value="0.1" />
+        <arg name="s_start" value="0.0" />
+        <arg name="trajectory_file" value="$(arg roadmap_file)" />
+        <arg name="hull_file" value="$(find lanelet_map_launch)/res/sample_hull.xml" />
+        <arg name="frame_id_loc_mgmt" value="map" />
+        <arg name="lanelet_ids_on_route" value="$(arg lanelet_ids_on_route)" />
+        <arg name="continuous_control_frame_id" value="odom" />
+
+        <arg name="prediction_map_frame" value="map" />
+  </include>
+
+      <!-- launch simulated perception for BERTHA-->
+    <!-- Set Arguments for exact localization sensor-->
+   	<arg name="sensor_name_exact_localization_sensor" value="exact_localization_sensor" />
+    <node pkg="sim_bertha_perception_ros_tool" type="exact_localization_sensor" name="exact_localization_sensor" ns="perception" output="screen" if="$(arg coincar_sim)">
+       	<!-- Set Parameters -->
+    	  <param name="vehicle_id" value="0" />
+    	  <param name="sensor_child_frame_id_prefix" value="v0_exact_localization_sensor_"/>
+
+       	<!-- Remap Topics -->
+        <remap from="default_egoMotion_sensor_out_topic" to="/motion_state"/> <!-- replaces global loc fusion -->
+        <remap from="default_objects_ground_truth_topic_with_ns" to="/sim/objects_ground_truth"/>
+    </node>
+   	<!-- Set Arguments for abstract object sensor-->
+   	<arg name="sensor_name_abstract_object_sensor" value="abstract_object_sensor" />
+    <node pkg="sim_bertha_perception_ros_tool" type="abstract_object_sensor" name="abstract_object_sensor" ns="perception" output="screen" if="$(arg coincar_sim)">
+        <!-- Set Parameters -->
+        <param name="vehicle_id" value="0" />
+        <param name="sensor_child_frame_id_prefix" value="v0_abstract_object_sensor_"/>
+
+        <!-- Remap Topics -->
+        <remap from="default_perceivedObjects_sensor_out_topic" to="/objects"/>
+        <remap from="default_objects_ground_truth_topic_with_ns" to="/sim/objects_ground_truth"/>
+    </node>
+
+
+    <include file="$(find bertha_actuator_ros_tool)/launch/sample_actuator.launch" ns="actuator" if="$(arg coincar_sim)">
+         <!-- Set Parameters -->
+         <arg name="vehicle_id" value="0" />
+         <arg name="vehicle_ns" value="/"/>
+
+         <arg name="delta_t" value="0.001" />
+         <arg name="horizon_t" value="5." />
+         <arg name="skip_buffer" value="0" />
+         <arg name="max_actuator_frequency" value="10" />
+         <arg name="min_delay_millisecs" value="20" />
+         <arg name="delay_steering_secs" value="0.1" />
+         <arg name="delay_acceleration_secs" value="0.1" />
+         <arg name="vehicle_characteristics_file" value="$(find lanelet_map_launch)/res/characteristics_ekla.yaml" />
+
+         <!-- Topics -->
+         <arg name="steering_angle_in_topic" value="/control/steering" />
+         <arg name="acceleration_in_topic" value="/control/acceleration"/>
+         <arg name="objects_ground_truth_topic_with_ns" value="/sim/objects_ground_truth"/>
+         <arg name="desired_motion_absolute_out_topic" value="/sim/desired_motion_absolute"/>
+    </include>
+
+
+    <include file="$(find controller_ros_module)/launch/controller_pipeline.launch" if="$(eval ((arg('coincar_controller') != 'inactive') and (arg('coincar_sim'))))">
+
+          <arg name="continuous_control_frame_id" value="odom" /> <!-- frame id for the controller, must be contious, e.g. odom -->
+          <arg name="vehicle_frame_id" value="object0" />
+          <arg name="ego_motion_in_topic_with_ns" value="/motion_state" />
+          <arg name="trajectory_lat_to_be_controlled_in_topic_with_ns" value="/2d_pipeline/trajectory_to_be_controlled_lat" />
+          <arg name="trajectory_lon_to_be_controlled_in_topic_with_ns" value="/2d_pipeline/trajectory_to_be_controlled_lon" />
+          <arg name="steering_angle_from_actuator_in_topic_with_ns" value="/sensor/carinterface/steering_angle" />
+          <arg name="steering_angle_out_topic_with_ns" value="/control/steering" />
+          <arg name="steering_angle_smoothed_out_topic_with_ns" value="/control/steering_smoothed" />
+          <arg name="acceleration_out_topic_with_ns" value="/control/acceleration" />
+          <arg name="controller_activation" value="$(arg coincar_controller)" />
+
+    </include>
+
+
+
+
+
+  <!--<include file="$(find simulation_adenauerring)/launch/vehicle_launchfiles/sample_static_obstacle.launch" ns="$(arg pedestrian1_ns)" >
+     <arg name="vehicle_id" value="1" />
+     <arg name="vehicle_ns" value="10" />
+
+     <arg name="object_initialization_topic_with_ns" value="/sim/object_initialization" />
+     <arg name="trajectory_file" value="$(find lanelet2_map_launch)/res/aldenhoven_roadmap.osm" />
+     <arg name="hull_file" value="$(find simulation_adenauerring)/res/sample_hull.xml" />
+     <arg name="object_type" value="pedestrian" />
+     <arg name="s_start" value="0.0" />
+     <arg name="frame_id_loc_mgmt" value="$(arg loc_mgmt_frame_id)" />
+  </include> -->
+
+
+</launch>

@@ -1,0 +1,9 @@
+Header header
+int64[] time
+float64[] latitude
+float64[] longitude
+float64[] s
+float64[] v
+float64[] a
+float64[] theta
+float64[] kappa

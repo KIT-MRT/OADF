@@ -1,0 +1,11 @@
+Header header
+Transformation position
+float64 velx
+float64 vely
+float64 velz
+float64 velyaw
+float64 accx
+float64 accy
+float64 accz
+float64 accyaw
+Transformation[] frames

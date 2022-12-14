@@ -1,0 +1,7 @@
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:72:10:[m[K [01;31m[Kfatal error: [m[Koadf_msgs/Darmstadt_Trajectory.h: No such file or directory
+ #include [01;31m[K<oadf_msgs/Darmstadt_Trajectory.h>[m[K
+          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/CMNode_ROS1_HelloCM.dir/src/CMNode_ROS1_HelloCM.cpp.o] Error 1
+make[1]: *** [CMakeFiles/CMNode_ROS1_HelloCM.dir/all] Error 2
+make: *** [all] Error 2

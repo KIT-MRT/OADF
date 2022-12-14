@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>lanelet_msgs</name>
+  <version>0.0.0</version>
+  <description>ROS Messages for lanelet2 primitives</description>
+
+  <license>MRT</license>
+  <maintainer email="maximilian.naumann@kit.edu">Maximilian Naumann</maintainer>
+  <author email="philippbender4@gmail.com">Philipp Bender</author>
+  <url type="repository">https://gitlab.mrt.uni-karlsruhe.de/MRT/lanelet_ros_tool.git</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>mrt_cmake_modules</build_depend>
+  <build_depend>message_generation</build_depend>
+  <exec_depend>message_runtime</exec_depend>
+  <test_depend>gtest</test_depend>
+
+  <build_depend>roscpp</build_depend>
+  <!-- <build_depend>rospy</build_depend> Use this instead of roscpp  when writing a python node -->
+  <depend>roslib</depend>
+
+  <!--
+    Documentation for dependencies:
+    <build_depend>            Build-time dependency required to build
+                              this package, e.g. boost, opencv.
+    <build_export_depend>     Exported build-time dependency required to
+                              build packages that depend on this package,
+                              e.g. boost, opencv.
+    <exec_depend>             Execution dependency required to run this
+                              package, e.g. boost, opencv.
+    <depend>                  Build-time, exported build-time and execution
+                              dependency. This is a bundled synonym for
+                              <build_depend>, <build_export_depend> and
+                              <exec_depend>.
+  -->
+  <depend>geometry_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>automated_driving_msgs</depend>
+
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+  </export>
+</package>

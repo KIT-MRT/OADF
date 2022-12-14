@@ -1,0 +1,20 @@
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:121:2:[m[K [01;35m[Kwarning: [m[K#warning "Debug options are enabled!" [[01;35m[K-Wcpp[m[K]
+ #[01;35m[Kwarning[m[K "Debug options are enabled!"
+  [01;35m[K^~~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:501:45:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+     std::cout << "This is call" << std::endl[01;31m[K;[m[K
+                                             [01;31m[K^[m[K
+                                             [32m[K)[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:500:46:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+ static tDrvTrj_TrjState usertrj_GetTrajectory[01;36m[K([m[K
+                                              [01;36m[K^[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:502:27:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kconst[m[K’
+     tDrvTrj_Trj* TrjTrgt, [01;31m[Kconst[m[K tDrvTrj_Pnt* PntCurrent, double tPreview, double dsPreview, tDrvTrj_Mode Mode) {
+                           [01;31m[K^~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:[m[K In function ‘[01m[Kint CMRosIF_CMNode_Init(int, char**, char*, tInfos*)[m[K’:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:973:29:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[KtDrvTrj_TrjState*[m[K’ to ‘[01m[KtDrvTrj_TrjState (*)(tDrvTrj_Trj*, const tDrvTrj_Pnt*, double, double, tDrvTrj_Mode)[m[K’ in assignment
+     DrvTrj_GetTrajectory = &[01;31m[Kusertrj_GetTrajectory[m[K; /* (required) */
+                             [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/CMNode_ROS1_HelloCM.dir/src/CMNode_ROS1_HelloCM.cpp.o] Error 1
+make[1]: *** [CMakeFiles/CMNode_ROS1_HelloCM.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,38 @@
+# Config file autoX.toml for psaservice
+# Author: Stefan Ackermann <stefan.ackermann@tu-darmstadt.de>
+# Date 01.02.2022
+# Version 1
+# Copyright: MIT License
+# Copyright (c) Stefan Ackermann (2021) <stefan.ackermann@tu-darmstadt.de>
+
+# For autoSHUTTLE and autoCARGO
+
+title = "autoX"
+
+[uss]
+uss_ip = "192.168.127.29"
+uss_port = 19227
+
+[radar.common]
+radar_limit_counter_drs = 3
+
+[radar.front]
+radarf_ip = "192.168.127.52"
+radarf_port = 19227
+
+[radar.back]
+radarb_ip = "192.168.127.54"
+radarb_port = 19227
+
+[debug]
+ussstatus = 0
+radarfstatus = 0
+radarbstatus = 0
+time = 0.1
+errmsg = 0
+operational = 0
+disp_Rgatewayerror = 1
+disp_ussgatewayerror = 1
+
+[parameter]
+uss = [ -1700, 0, 0 ]

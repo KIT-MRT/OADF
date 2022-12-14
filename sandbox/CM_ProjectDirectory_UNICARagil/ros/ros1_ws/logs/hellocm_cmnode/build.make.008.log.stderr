@@ -1,0 +1,43 @@
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:121:2:[m[K [01;35m[Kwarning: [m[K#warning "Debug options are enabled!" [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcpp-Wcpp]8;;[m[K]
+  121 | #[01;35m[Kwarning[m[K "Debug options are enabled!"
+      |  [01;35m[K^~~~~~~[m[K
+In file included from [01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:64[m[K:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:[m[K In function ‘[01m[KtDrvTrj_TrjState usertrj_GetTrajectory(tDrvTrj_Trj*, const tDrvTrj_Pnt*, double, double, tDrvTrj_Mode)[m[K’:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:517:23:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%lu[m[K’ expects argument of type ‘[01m[Klong unsigned int[m[K’, but argument 9 has type ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  517 |             ROS_ERROR([01;35m[K"Received /trajGCS only has %lu elements, it should have %lu elements"[m[K, trj_len, [32m[K51[m[K);
+      |                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K           [32m[K~~[m[K
+      |                                                                                                        [32m[K|[m[K
+      |                                                                                                        [32m[Kint[m[K
+[01m[K/opt/ros/melodic/include/ros/console.h:348:165:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+  348 |     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, [01;36m[K__VA_ARGS__[m[K)
+      |                                                                                                                                                                     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/console.h:387:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+  387 |       [01;36m[KROSCONSOLE_PRINT_AT_LOCATION[m[K(__VA_ARGS__); \
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/console.h:572:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+  572 | #define ROS_LOG(level, name, ...) [01;36m[KROS_LOG_COND[m[K(true, level, name, __VA_ARGS__)
+      |                                   [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/rosconsole/macros_generated.h:214:24:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+  214 | #define ROS_ERROR(...) [01;36m[KROS_LOG[m[K(::ros::console::levels::Error, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+      |                        [01;36m[K^~~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:517:13:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_ERROR[m[K’
+  517 |             [01;36m[KROS_ERROR[m[K("Received /trajGCS only has %lu elements, it should have %lu elements", trj_len, 51);
+      |             [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:517:82:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  517 |             ROS_ERROR("Received /trajGCS only has %lu elements, it should have [01;36m[K%lu[m[K elements", trj_len, 51);
+      |                                                                                [01;36m[K~~^[m[K
+      |                                                                                  [01;36m[K|[m[K
+      |                                                                                  [01;36m[Klong unsigned int[m[K
+      |                                                                                [32m[K%u[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:[m[K In function ‘[01m[Kint CMRosIF_CMNode_Out()[m[K’:
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1557:105:[m[K [01;31m[Kerror: [m[K‘[01m[KlastTime[m[K’ was not declared in this scope; did you mean ‘[01m[Klast_time[m[K’?
+ 1557 |     if (CMNode.Cfg.Mode == CMNode_Mode_Disabled || SimCore.State != SCState_Simulate || time.toSec() == [01;31m[KlastTime[m[K.toSec())
+      |                                                                                                         [01;31m[K^~~~~~~~[m[K
+      |                                                                                                         [32m[Klast_time[m[K
+[01m[K/home/molinos/shared_sw_kit_mrt_cerebrum/sandbox/CM_ProjectDirectory_UNICARagil/ros/ros1_ws/src/hellocm_cmnode/src/CMNode_ROS1_HelloCM.cpp:1563:5:[m[K [01;31m[Kerror: [m[K‘[01m[KlastTime[m[K’ was not declared in this scope; did you mean ‘[01m[Klast_time[m[K’?
+ 1563 |     [01;31m[KlastTime[m[K = time;
+      |     [01;31m[K^~~~~~~~[m[K
+      |     [32m[Klast_time[m[K
+make[2]: *** [CMakeFiles/CMNode_ROS1_HelloCM.dir/src/CMNode_ROS1_HelloCM.cpp.o] Error 1
+make[1]: *** [CMakeFiles/CMNode_ROS1_HelloCM.dir/all] Error 2
+make: *** [all] Error 2

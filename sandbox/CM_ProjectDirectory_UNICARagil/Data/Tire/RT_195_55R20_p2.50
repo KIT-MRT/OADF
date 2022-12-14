@@ -1,0 +1,56 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-Tire-RTTire 3
+FileCreator = CarMaker 2020-03-09 17:05:34
+Description:
+	Created with IPG Tire Data Set Generator - Version Date: 2019-10-21
+	Generated - not validated - Tire data
+	Based on 'RT_195_55R20_p2.50.tdx'
+	""
+	#   Load:      32 points [ 0 N  to  8500 N ]
+	#   Slip:     128 points [ -0.15   to  0.15 ]
+	#   Alpha:    128 points [ -12 deg  to  12 deg ]
+
+
+## General ###############################################################
+Side = left
+StandStill.cLong = 0.01
+StandStill.cSide = 0.2
+StandStill.vMax = 0.25
+
+
+## Visualization #########################################################
+FLoadMax = 10000
+NomWidth = 0.195
+AspectRatio = 0.55
+
+
+## RT-Tire ###############################################################
+muRoad = 1
+KinRollRadius = 0.353385
+NomRadius = 0.3615
+Radial.Stiffness = 406088
+Radial.Damping = 4604.1
+
+RollResist.Kind = TrqLoad
+RollResist.Factor = 0.0214
+
+LongFrc.Length = 0.05
+SideFrc.Length = 0.1
+AlignTrq.Length = 0.1
+LongFrc.Stiffness = 1.0
+SideFrc.Stiffness = 1.0
+AlignTrq.Stiffness = 1.0
+
+InclinAngle2OffsetFy = 0.0
+InclinAngle2OffsetMz = 0.0
+InclinAngle2Alpha = 0.0
+
+TurnSlip.MzMax = 0.0
+TurnSlip.cMz = 0.0
+TurnSlip.Alpha2Mz = 0.0
+
+BinFName = RT_195_55R20_p2.50.bin
+
+
+## Additional Parameters #################################################
+CreateArgs = -if Data/Tire/Examples/RT_195_55R20_p2.50.tdx -of Data/Tire/Examples/RT_195_55R20_p2.50
